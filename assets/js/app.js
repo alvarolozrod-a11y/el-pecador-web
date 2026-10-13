@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BAR EL PECADOR - APP LOGIC (VANILLA JS - RESTORED V4 WITH SMOOTH MAP SWITCHING)
+   BAR EL PECADOR - APP LOGIC (MULTISEDE + REVIEWS CAROUSEL WITH SWIPE)
    ========================================================================== */
 
 // Data definitions for locations
@@ -335,11 +335,11 @@ document.addEventListener("DOMContentLoaded", () => {
   initLocationSwitcher();
   renderMenu("hamburguesas");
   initMenuFilters();
-  initModal();
   initMobileMenu();
+  initReviewsCarousel();
 });
 
-// Function to update active location UI everywhere and switch iframe instantly without lag
+// Function to update active location UI everywhere and switch iframe
 function setActiveLocation(locId) {
   if (!locationsData[locId]) return;
   currentActiveLocation = locId;
@@ -368,12 +368,6 @@ function setActiveLocation(locId) {
   // Update Mobile Sticky Bar
   const stickySedeName = document.getElementById("stickySedeName");
   if (stickySedeName) stickySedeName.textContent = `📍 ${data.shortName}`;
-
-  // Update Modal Text
-  const modalSedeText = document.getElementById("modalSedeText");
-  if (modalSedeText) {
-    modalSedeText.innerHTML = `Reservando en: <strong>${data.name}</strong>`;
-  }
 }
 
 function initLocationSwitcher() {
@@ -390,14 +384,13 @@ function initLocationSwitcher() {
   // Clickable Sede Cards with ultra-fast event handling
   const clickableCards = document.querySelectorAll(".clickable-card");
   clickableCards.forEach(card => {
-    card.addEventListener("click", (e) => {
+    card.addEventListener("click", () => {
       const locId = card.dataset.select;
       if (locId) {
         setActiveLocation(locId);
       }
     });
 
-    // Keyboard accessibility
     card.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
@@ -440,26 +433,6 @@ function initMenuFilters() {
   });
 }
 
-// Modal Logic
-function initModal() {
-  const modal = document.getElementById("reserveModal");
-  const overlay = document.getElementById("modalOverlay");
-  const closeBtn = document.getElementById("modalClose");
-
-  const openModal = () => modal.classList.add("active");
-  const closeModal = () => modal.classList.remove("active");
-
-  document.querySelectorAll(".btn-reserve-modal").forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      openModal();
-    });
-  });
-
-  if (overlay) overlay.addEventListener("click", closeModal);
-  if (closeBtn) closeBtn.addEventListener("click", closeModal);
-}
-
 // Mobile Hamburger Navigation
 function initMobileMenu() {
   const hamburger = document.getElementById("hamburgerBtn");
@@ -474,6 +447,129 @@ function initMobileMenu() {
       link.addEventListener("click", () => {
         navMenu.classList.remove("active");
       });
+    });
+  }
+}
+
+// Reviews Automatic & Touch/Drag Carousel Logic
+function initReviewsCarousel() {
+  const track = document.getElementById("carouselTrack");
+  const slides = document.querySelectorAll(".review-slide");
+  const prevBtn = document.getElementById("prevReview");
+  const nextBtn = document.getElementById("nextReview");
+  const dotsContainer = document.getElementById("carouselDots");
+
+  if (!track || slides.length === 0) return;
+
+  let currentIndex = 0;
+  let autoSlideInterval;
+  let startX = 0;
+  let currentTranslate = 0;
+  let prevTranslate = 0;
+  let isDragging = false;
+
+  // Create Navigation Dots
+  slides.forEach((_, idx) => {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    if (idx === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => goToSlide(idx));
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll(".dot");
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle("active", idx === currentIndex);
+    });
+  }
+
+  function goToSlide(index) {
+    currentIndex = index;
+    if (currentIndex < 0) currentIndex = slides.length - 1;
+    if (currentIndex >= slides.length) currentIndex = 0;
+    updateCarousel();
+    resetAutoSlide();
+  }
+
+  function nextSlide() {
+    goToSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    goToSlide(currentIndex - 1);
+  }
+
+  if (nextBtn) nextBtn.addEventListener("click", nextSlide);
+  if (prevBtn) prevBtn.addEventListener("click", prevSlide);
+
+  // Auto Play every 4 seconds
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 4000);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+  }
+
+  startAutoSlide();
+
+  // Touch and Mouse Drag Events for Mobile & Desktop Swipe
+  const trackWrapper = document.querySelector(".carousel-track-wrapper");
+
+  if (trackWrapper) {
+    // Touch Events
+    trackWrapper.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+      isDragging = true;
+      clearInterval(autoSlideInterval);
+    }, { passive: true });
+
+    trackWrapper.addEventListener("touchend", (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      const endX = e.changedTouches[0].clientX;
+      const diffX = startX - endX;
+
+      if (diffX > 50) {
+        nextSlide();
+      } else if (diffX < -50) {
+        prevSlide();
+      } else {
+        startAutoSlide();
+      }
+    });
+
+    // Mouse Drag Events
+    trackWrapper.addEventListener("mousedown", (e) => {
+      startX = e.clientX;
+      isDragging = true;
+      clearInterval(autoSlideInterval);
+    });
+
+    trackWrapper.addEventListener("mouseup", (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      const endX = e.clientX;
+      const diffX = startX - endX;
+
+      if (diffX > 50) {
+        nextSlide();
+      } else if (diffX < -50) {
+        prevSlide();
+      } else {
+        startAutoSlide();
+      }
+    });
+
+    trackWrapper.addEventListener("mouseleave", () => {
+      if (isDragging) {
+        isDragging = false;
+        startAutoSlide();
+      }
     });
   }
 }

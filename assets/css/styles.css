@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BAR EL PECADOR - MASTER STYLESHEET (OPTIMIZED V4)
+   BAR EL PECADOR - MASTER STYLESHEET (NO RESERVA BUTTONS + CAROUSEL + CLEAN BADGE)
    ========================================================================== */
 
 :root {
@@ -117,17 +117,6 @@ h1, h2, h3, h4 {
   color: var(--primary);
 }
 
-.btn-outline {
-  background: transparent;
-  color: var(--white);
-  border: 2px solid var(--white);
-}
-
-.btn-outline:hover {
-  background: var(--white);
-  color: var(--dark-bg);
-}
-
 .btn-lg {
   padding: 14px 28px;
   font-size: 1rem;
@@ -136,10 +125,6 @@ h1, h2, h3, h4 {
 .btn-sm {
   padding: 7px 14px;
   font-size: 0.85rem;
-}
-
-.btn-block {
-  width: 100%;
 }
 
 /* Header Navbar */
@@ -226,7 +211,7 @@ h1, h2, h3, h4 {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
 }
 
 .nav-link {
@@ -237,11 +222,6 @@ h1, h2, h3, h4 {
 
 .nav-link:hover {
   color: var(--primary);
-}
-
-.nav-cta {
-  padding: 7px 16px;
-  font-size: 0.82rem;
 }
 
 .hamburger-btn {
@@ -285,22 +265,32 @@ h1, h2, h3, h4 {
   width: 100%;
 }
 
-.badge {
+/* Brand Name prominently displayed on initial load */
+.brand-hero-name {
+  font-size: 4.8rem;
+  color: var(--white);
+  letter-spacing: 2px;
+  line-height: 1;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+/* Clean badge: Red text without border or background box */
+.clean-badge {
   display: inline-block;
-  background-color: rgba(255, 59, 48, 0.2);
   color: var(--primary);
-  border: 1px solid var(--primary);
-  padding: 5px 14px;
-  border-radius: 30px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  margin-bottom: 16px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
 }
 
 .hero-title {
-  font-size: 3.8rem;
+  font-size: 3.2rem;
   line-height: 1;
   margin-bottom: 16px;
+  color: #E2E2E8;
 }
 
 .hero-subtitle {
@@ -323,7 +313,6 @@ h1, h2, h3, h4 {
   margin-bottom: 24px;
 }
 
-/* Hardware Accelerated Sede Cards for 60fps clicks on desktop and mobile */
 .sede-card.clickable-card {
   background: #1A1A22;
   border-radius: var(--radius-md);
@@ -506,7 +495,6 @@ h1, h2, h3, h4 {
   gap: 20px;
 }
 
-/* Dish Card Layout with Square Photo Thumbnail */
 .menu-card {
   background-color: var(--card-bg);
   border-radius: var(--radius-md);
@@ -611,132 +599,111 @@ h1, h2, h3, h4 {
   border: 1px solid var(--border-color);
 }
 
-/* Reviews Section */
+/* Reviews Carousel Section */
 .reviews-section {
   padding: 90px 0;
   background-color: var(--dark-bg);
 }
 
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+.carousel-container {
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.carousel-track-wrapper {
+  overflow: hidden;
+  width: 100%;
+  border-radius: var(--radius-md);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: grab;
+}
+
+.carousel-track:active {
+  cursor: grabbing;
+}
+
+.review-slide {
+  min-width: 100%;
+  box-sizing: border-border-box;
 }
 
 .review-card {
   background: var(--card-bg);
-  padding: 24px;
+  padding: 35px 30px;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-color);
+  text-align: center;
 }
 
 .stars {
   color: var(--accent-gold);
-  margin-bottom: 10px;
-  font-size: 1.1rem;
+  margin-bottom: 14px;
+  font-size: 1.3rem;
 }
 
 .review-text {
   font-style: italic;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
   color: var(--text-main);
-  font-size: 0.92rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
 .review-author {
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
   font-weight: 700;
 }
 
-/* Modal */
-.modal {
-  position: fixed;
-  inset: 0;
-  z-index: 2000;
+.carousel-arrow {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--white);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  pointer-events: none;
   transition: var(--transition);
+  flex-shrink: 0;
 }
 
-.modal.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.modal-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.8);
-  backdrop-filter: blur(5px);
-}
-
-.modal-content {
-  position: relative;
-  z-index: 2;
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  width: 90%;
-  max-width: 450px;
-  padding: 26px;
-  border-radius: var(--radius-md);
-}
-
-.modal-close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: none;
-  border: none;
-  color: var(--white);
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-
-.modal-content h3 {
-  font-size: 1.8rem;
-  margin-bottom: 4px;
-}
-
-.modal-content p {
-  color: var(--text-muted);
-  margin-bottom: 18px;
-  font-size: 0.88rem;
-}
-
-.form-group {
-  margin-bottom: 14px;
-}
-
-.form-group label {
-  display: block;
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  margin-bottom: 5px;
-}
-
-.form-group input, .form-group select {
-  width: 100%;
-  padding: 10px;
-  background: var(--dark-bg);
-  border: 1px solid var(--border-color);
-  color: var(--white);
-  border-radius: var(--radius-sm);
-  outline: none;
-  font-size: 0.9rem;
-}
-
-.form-group input:focus, .form-group select:focus {
+.carousel-arrow:hover {
+  background: var(--primary);
   border-color: var(--primary);
 }
 
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border-color);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.dot.active {
+  background: var(--primary);
+  width: 24px;
+  border-radius: 10px;
 }
 
 /* Mobile Sticky Bar */
@@ -839,8 +806,12 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 768px) {
+  .brand-hero-name {
+    font-size: 3.2rem;
+  }
+
   .hero-title {
-    font-size: 2.6rem;
+    font-size: 2.2rem;
   }
 
   .story-grid {
@@ -875,5 +846,9 @@ h1, h2, h3, h4 {
     width: 85px;
     height: 85px;
     min-width: 85px;
+  }
+
+  .carousel-arrow {
+    display: none;
   }
 }

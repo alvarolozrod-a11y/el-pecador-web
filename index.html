@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bar El Pecador | Hamburguesería & Bar de Raciones en Leganés y Alcorcón</title>
-    <meta name="description" content="Descubre Bar El Pecador. Las mejores hamburguesas gourmet, raciones, bocatas y desayunos en Leganés y Alcorcón. Pide a domicilio o reserva tu mesa.">
+    <meta name="description" content="Descubre Bar El Pecador. Las mejores hamburguesas gourmet, raciones, bocatas y desayunos en Leganés y Alcorcón. Pide a domicilio o visítanos.">
     <meta name="keywords" content="bar el pecador, hamburgueseria leganes, hamburgueseria alcorcon, raciones leganes, bocatas alcorcon, desayunos madrid">
 
     <!-- Open Graph -->
@@ -112,7 +112,7 @@
 
             <!-- Location Selector Dropdown Desktop -->
             <div class="location-switcher-wrapper">
-                <span class="switcher-label">📍 Sede activa:</span>
+                <span class="switcher-label">📍 Restaurante activo:</span>
                 <select id="headerLocationSelect" class="location-select">
                     <option value="leganes">Leganés (Av. Carmen Martín Gaite)</option>
                     <option value="alcorcon">Alcorcón (C. los Nardos)</option>
@@ -126,11 +126,10 @@
             </a>
 
             <nav class="nav-menu" id="navMenu">
-                <a href="#sedes" class="nav-link">Sedes</a>
+                <a href="#sedes" class="nav-link">Restaurantes</a>
                 <a href="#menu" class="nav-link">Carta</a>
-                <a href="#nosotros" class="nav-link">Historia</a>
+                <a href="#nosotros" class="nav-link">Nosotros</a>
                 <a href="#opiniones" class="nav-link">Opiniones</a>
-                <a href="#" class="btn btn-primary nav-cta btn-reserve-modal">Reservar Mesa</a>
             </nav>
 
             <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir Menú">
@@ -142,25 +141,26 @@
     </header>
 
     <main>
-        <!-- Hero Section with Sedes Section Integrated directly inside -->
+        <!-- Hero Section with Brand Name & Clean Badge -->
         <section class="hero-section" id="sedes">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <div class="badge">🔥 EL TEMPLO DEL PECADO GASTRONÓMICO</div>
-                <h1 class="hero-title">PECADO CAPITAL EN CADA BOCADO</h1>
+                <h1 class="brand-hero-name">BAR EL PECADOR</h1>
+                <div class="clean-badge">🔥 EL TEMPLO DEL PECADO GASTRONÓMICO</div>
+                <h2 class="hero-title">PECADO CAPITAL EN CADA BOCADO</h2>
                 <p class="hero-subtitle">
                     Hamburguesas gourmet, raciones para compartir, bocatas y desayunos. Sabor auténtico en Leganés y Alcorcón.
                 </p>
 
-                <!-- Sedes Section in Hero with Direct Iframe Map restored -->
+                <!-- Restaurantes Section in Hero -->
                 <div class="hero-sedes-wrapper">
                     <div class="sedes-grid">
-                        <!-- Sede Leganés Card -->
+                        <!-- Restaurante Leganés Card -->
                         <div class="sede-card clickable-card" id="cardLeganes" data-select="leganes" role="button" tabindex="0">
                             <div class="sede-image-wrapper">
                                 <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Bar El Pecador Leganés" loading="lazy">
-                                <span class="badge-tag">Sede Leganés</span>
-                                <div class="card-selected-indicator">✓ SEDE SELECCIONADA</div>
+                                <span class="badge-tag">Leganés</span>
+                                <div class="card-selected-indicator">✓ RESTAURANTE SELECCIONADO</div>
                             </div>
                             <div class="sede-content text-left">
                                 <h3>Bar El Pecador - Leganés</h3>
@@ -180,12 +180,12 @@
                             </div>
                         </div>
 
-                        <!-- Sede Alcorcón Card -->
+                        <!-- Restaurante Alcorcón Card -->
                         <div class="sede-card clickable-card" id="cardAlcorcon" data-select="alcorcon" role="button" tabindex="0">
                             <div class="sede-image-wrapper">
                                 <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Bar El Pecador Alcorcón" loading="lazy">
-                                <span class="badge-tag">Sede Alcorcón</span>
-                                <div class="card-selected-indicator">✓ SEDE SELECCIONADA</div>
+                                <span class="badge-tag">Alcorcón</span>
+                                <div class="card-selected-indicator">✓ RESTAURANTE SELECCIONADO</div>
                             </div>
                             <div class="sede-content text-left">
                                 <h3>Bar El Pecador - Alcorcón</h3>
@@ -206,7 +206,7 @@
                         </div>
                     </div>
 
-                    <!-- Direct Google Map Frame restored -->
+                    <!-- Direct Google Map Frame -->
                     <div class="map-wrapper">
                         <div class="map-header text-left">
                             <h3 id="mapTitle">Mapa de Ubicación: Bar El Pecador - Leganés</h3>
@@ -217,7 +217,6 @@
 
                 <div class="hero-ctas">
                     <a href="#menu" class="btn btn-primary btn-lg">Ver Carta Completa</a>
-                    <a href="#" class="btn btn-outline btn-lg btn-reserve-modal" id="heroReserveBtn">Reservar Mesa</a>
                 </div>
             </div>
         </section>
@@ -228,7 +227,7 @@
                 <div class="section-header text-center">
                     <span class="section-tag">NUESTRA CARTA COMPLETA</span>
                     <h2 class="section-title">PECA CON GUSTO</h2>
-                    <p class="section-desc">Misma calidad, mismo sabor y los mejores ingredientes en ambas sedes.</p>
+                    <p class="section-desc">Misma calidad, mismo sabor y los mejores ingredientes en ambos restaurantes.</p>
                 </div>
 
                 <!-- Menu Filter Buttons -->
@@ -248,11 +247,11 @@
             </div>
         </section>
 
-        <!-- Historia Section -->
+        <!-- Nosotros Section -->
         <section class="story-section" id="nosotros">
             <div class="container story-grid">
                 <div class="story-text">
-                    <span class="section-tag">NUESTRA HISTORIA</span>
+                    <span class="section-tag">NOSOTROS</span>
                     <h2 class="section-title">PASIÓN POR LA BUENA COMIDA</h2>
                     <p>
                         <strong>Bar El Pecador</strong> nació con una misión clara: ofrecer comida reconfortante, abundante y llena de sabor sin rodeos. Creemos que una gran experiencia gastronómica empieza con insumos seleccionados de la máxima calidad.
@@ -281,7 +280,7 @@
             </div>
         </section>
 
-        <!-- Testimonios Section -->
+        <!-- Testimonios Carousel Section -->
         <section class="reviews-section" id="opiniones">
             <div class="container">
                 <div class="section-header text-center">
@@ -289,76 +288,67 @@
                     <h2 class="section-title">TESTIMONIOS REALES</h2>
                 </div>
 
-                <div class="reviews-grid">
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="review-text">"Las mejores hamburguesas y raciones de Leganés sin duda. La carne tiene un sabor brutal y el servicio es super rápido."</p>
-                        <span class="review-author">- Carlos M. (Google Local Guide)</span>
+                <!-- Interactive Auto Carousel (1 Review visible at a time) -->
+                <div class="carousel-container" id="reviewCarousel">
+                    <button class="carousel-arrow carousel-prev" id="prevReview" aria-label="Anterior reseña">&#10094;</button>
+                    
+                    <div class="carousel-track-wrapper">
+                        <div class="carousel-track" id="carouselTrack">
+                            <div class="review-slide">
+                                <div class="review-card">
+                                    <div class="stars">★★★★★</div>
+                                    <p class="review-text">"Las mejores hamburguesas y raciones de Leganés sin duda. La carne tiene un sabor brutal y el servicio es super rápido."</p>
+                                    <span class="review-author">- Carlos M. (Google Local Guide)</span>
+                                </div>
+                            </div>
+                            <div class="review-slide">
+                                <div class="review-card">
+                                    <div class="stars">★★★★★</div>
+                                    <p class="review-text">"Probamos el restaurante de Alcorcón recién abierto. Los bocatas y las patatas con cheddar y bacon están de escándalo. Volveremos seguro."</p>
+                                    <span class="review-author">- Laura G.</span>
+                                </div>
+                            </div>
+                            <div class="review-slide">
+                                <div class="review-card">
+                                    <div class="stars">★★★★★</div>
+                                    <p class="review-text">"Excelente relación calidad-precio. Un ambiente estupendo tanto para desayunar como para cenar o picar con amigos."</p>
+                                    <span class="review-author">- David R.</span>
+                                </div>
+                            </div>
+                            <div class="review-slide">
+                                <div class="review-card">
+                                    <div class="stars">★★★★★</div>
+                                    <p class="review-text">"Trato de 10 por parte del personal de Leganés. La hamburguesa Especial con champiñones y mozzarella está riquísima."</p>
+                                    <span class="review-author">- Elena V.</span>
+                                </div>
+                            </div>
+                            <div class="review-slide">
+                                <div class="review-card">
+                                    <div class="stars">★★★★★</div>
+                                    <p class="review-text">"Población de 10 estrellas para las patatas bravas y la oreja. Comida casera de verdad a precios ajustados."</p>
+                                    <span class="review-author">- Javier S.</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="review-text">"Probamos la sede de Alcorcón. Los bocatas y las patatas con cheddar y bacon están de escándalo. Repetiremos seguro."</p>
-                        <span class="review-author">- Laura G.</span>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="review-text">"Excelente relación calidad-precio. Un ambiente estupendo tanto para desayunar como para cenar con amigos."</p>
-                        <span class="review-author">- David R.</span>
-                    </div>
+
+                    <button class="carousel-arrow carousel-next" id="nextReview" aria-label="Siguiente reseña">&#10095;</button>
+                </div>
+
+                <div class="carousel-dots" id="carouselDots">
+                    <!-- Dynamic dots -->
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Modal de Reserva -->
-    <div class="modal" id="reserveModal">
-        <div class="modal-overlay" id="modalOverlay"></div>
-        <div class="modal-content">
-            <button class="modal-close" id="modalClose">&times;</button>
-            <h3>Reservar Mesa</h3>
-            <p id="modalSedeText">Reservando en: <strong>Bar El Pecador - Leganés</strong></p>
-            
-            <form id="reserveForm" onsubmit="event.preventDefault(); alert('¡Reserva enviada con éxito! Te confirmaremos por WhatsApp/SMS.'); document.getElementById('reserveModal').classList.remove('active');">
-                <div class="form-group">
-                    <label for="resName">Nombre Completo</label>
-                    <input type="text" id="resName" required placeholder="Ej. Juan Pérez">
-                </div>
-                <div class="form-group">
-                    <label for="resPhone">Teléfono</label>
-                    <input type="tel" id="resPhone" required placeholder="Ej. 600 000 000">
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="resDate">Fecha</label>
-                        <input type="date" id="resDate" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="resTime">Hora</label>
-                        <input type="time" id="resTime" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="resGuests">Nº de Comensales</label>
-                    <select id="resGuests" required>
-                        <option value="1">1 Persona</option>
-                        <option value="2" selected>2 Personas</option>
-                        <option value="3">3 Personas</option>
-                        <option value="4">4 Personas</option>
-                        <option value="5+">5 o más personas</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Confirmar Reserva</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Sticky Floating Footer Bar for Mobile CTA -->
+    <!-- Mobile Sticky Call Bar -->
     <div class="mobile-sticky-bar">
         <div class="sticky-info">
             <span id="stickySedeName">📍 Leganés</span>
             <a id="stickyPhone" href="tel:+34640844539">📞 640 84 45 39</a>
         </div>
-        <button class="btn btn-primary btn-sm btn-reserve-modal">Reservar Mesa</button>
+        <a href="tel:+34640844539" class="btn btn-primary btn-sm">Llamar Ahora</a>
     </div>
 
     <!-- Footer -->
@@ -371,9 +361,9 @@
             <div class="footer-links">
                 <h4>Enlaces Rápidos</h4>
                 <ul>
-                    <li><a href="#sedes">Ubicaciones</a></li>
+                    <li><a href="#sedes">Restaurantes</a></li>
                     <li><a href="#menu">Carta</a></li>
-                    <li><a href="#nosotros">Historia</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
                     <li><a href="#opiniones">Opiniones</a></li>
                 </ul>
             </div>
