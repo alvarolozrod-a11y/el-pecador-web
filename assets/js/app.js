@@ -26,50 +26,57 @@ const locationsData = {
   }
 };
 
-// Real Menu Data from Images
+// Real Menu Data with Custom High-Quality Food Dish Thumbnails
 const menuData = [
   // --- HAMBURGUESAS ---
   {
     title: "Pollo",
     category: "hamburguesas",
     price: "€14.00",
-    desc: "Cheddar, tomate, cebolla"
+    desc: "Cheddar, tomate, cebolla",
+    img: "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Bacon",
     category: "hamburguesas",
     price: "€14.00",
-    desc: "Cheddar, bacon, cebolla crunch"
+    desc: "Cheddar, bacon, cebolla crunch",
+    img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Cecina",
     category: "hamburguesas",
     price: "€14.00",
-    desc: "Cecina, queso de cabra, cebolla caramelizada"
+    desc: "Cecina, queso de cabra, cebolla caramelizada",
+    img: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Sweet",
     category: "hamburguesas",
     price: "€14.00",
-    desc: "Mermelada, queso crema, bacon, aros de cebolla"
+    desc: "Mermelada, queso crema, bacon, aros de cebolla",
+    img: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Mexicana",
     category: "hamburguesas",
     price: "€14.00",
-    desc: "Relish, jalapeños, guacamole, tomate, cebolla, mostaza dulce"
+    desc: "Relish, jalapeños, guacamole, tomate, cebolla, mostaza dulce",
+    img: "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f6?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Triple",
     category: "hamburguesas",
     price: "€14.00",
-    desc: "Triple carne, triple cheddar, bacon, cebolla crunch, huevo"
+    desc: "Triple carne, triple cheddar, bacon, cebolla crunch, huevo",
+    img: "https://images.unsplash.com/photo-1583723171701-a20c38661642?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Especial",
     category: "hamburguesas",
     price: "€14.00",
-    desc: "Triple carne, champiñones, guacamole, mozzarella"
+    desc: "Triple carne, champiñones, guacamole, mozzarella",
+    img: "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=400&q=80"
   },
 
   // --- PARA COMPARTIR ---
@@ -77,79 +84,92 @@ const menuData = [
     title: "Patatas",
     category: "para-compartir",
     price: "€6.00",
-    desc: "Patatas fritas crujientes"
+    desc: "Patatas fritas crujientes estilo casero",
+    img: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Patatas All-Oli",
     category: "para-compartir",
     price: "€6.00",
-    desc: "Patatas caseras acompañadas de salsa alioli"
+    desc: "Patatas caseras acompañadas de suave crema alioli",
+    img: "https://images.unsplash.com/photo-1630384060421-cb3f1b40439d?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Patatas Bravas",
     category: "para-compartir",
     price: "€6.00",
-    desc: "Con nuestra tradicional salsa brava picante"
+    desc: "Con nuestra salsa brava picante secreta",
+    img: "https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Patatas Braviolos",
     category: "para-compartir",
     price: "€6.00",
-    desc: "Combinación perfecta de salsa brava y alioli"
+    desc: "Mezcla irresistible de salsa brava y alioli casero",
+    img: "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Croquetón De Jamón (4u)",
     category: "para-compartir",
     price: "€6.00",
-    desc: "4 unidades de croquetones cremosos de jamón ibérico"
+    desc: "4 unidades cremosas de jamón ibérico artesanal",
+    img: "https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Salchipapas",
     category: "para-compartir",
     price: "€7.00",
-    desc: "Patatas fritas con salchichas troceadas y salsas"
+    desc: "Patatas fritas doradas con salchichas y salsas especial",
+    img: "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Aros De Cebolla",
     category: "para-compartir",
     price: "€7.00",
-    desc: "Aros de cebolla empanados y crujientes"
+    desc: "Crujientes aros de cebolla rebozados dorados",
+    img: "https://images.unsplash.com/photo-1639024471283-03518883512d?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Tequeños De Queso (6u)",
     category: "para-compartir",
     price: "€7.00",
-    desc: "6 unidades de deditos de queso artesanal"
+    desc: "6 palitos de queso fundente y crujiente",
+    img: "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Patatas Cheddar Y Bacon",
     category: "para-compartir",
     price: "€8.00",
-    desc: "Patatas con salsa cheddar caliente y bacon crujiente"
+    desc: "Bañadas en crema de cheddar caliente y trozos de bacon",
+    img: "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Oreja",
     category: "para-compartir",
     price: "€9.00",
-    desc: "Oreja a la plancha bien dorada y sazonada"
+    desc: "Oreja a la plancha dorada con toque de ajo y perejil",
+    img: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Alitas",
     category: "para-compartir",
     price: "€9.00",
-    desc: "Alitas de pollo crujientes"
+    desc: "Alitas de pollo sabrosas y crujientes",
+    img: "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Fingers De Pollo",
     category: "para-compartir",
     price: "€9.00",
-    desc: "Tiras de pechuga de pollo empanadas"
+    desc: "Tiras de pechuga empanadas crujientes",
+    img: "https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Calamares",
     category: "para-compartir",
     price: "€14.00",
-    desc: "Ración de calamares a la romana"
+    desc: "Ración abundante de calamares a la romana tierno",
+    img: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=400&q=80"
   },
 
   // --- BOCATAS ---
@@ -157,37 +177,43 @@ const menuData = [
     title: "Lomo",
     category: "bocatas",
     price: "€5.50",
-    desc: "Bocata recién hecho de lomo a la plancha"
+    desc: "Bocata en pan crujiente recién hecho de lomo a la plancha",
+    img: "https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Bacon",
     category: "bocatas",
     price: "€5.50",
-    desc: "Bocata crujiente de bacon"
+    desc: "Bocata tradicional de bacon dorado a la plancha",
+    img: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Panceta",
     category: "bocatas",
     price: "€5.50",
-    desc: "Bocata de panceta sabrosa"
+    desc: "Bocata reconfortante de panceta sabrosa",
+    img: "https://images.unsplash.com/photo-1553909489-cd47e0907980?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Pollo",
     category: "bocatas",
     price: "€7.50",
-    desc: "Bocata de pechuga de pollo a la plancha"
+    desc: "Bocata jugoso de pechuga de pollo a la plancha",
+    img: "https://images.unsplash.com/photo-1603064752734-4c48eff53d05?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Jamón",
     category: "bocatas",
     price: "€7.50",
-    desc: "Bocata de jamón ibérico"
+    desc: "Bocata de jamón ibérico con un chorrito de aceite virgen",
+    img: "https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Calamares",
     category: "bocatas",
     price: "€7.50",
-    desc: "El clásico bocadillo de calamares"
+    desc: "El castizo bocadillo de calamares crujientes",
+    img: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=400&q=80"
   },
 
   // --- PERRITOS ---
@@ -195,13 +221,15 @@ const menuData = [
     title: "Perrito Simple",
     category: "perritos",
     price: "€5.00",
-    desc: "Ketchup, mostaza, mayonesa, cebolla crunch"
+    desc: "Ketchup, mostaza, mayonesa, cebolla crunch",
+    img: "https://images.unsplash.com/photo-1619740455993-9e612b1af08a?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Perrito Especial",
     category: "perritos",
     price: "€7.00",
-    desc: "Ketchup, mostaza, mayonesa, salsa cheddar, bacon, salsa pepinillos, cebolla crunch"
+    desc: "Ketchup, mostaza, mayonesa, salsa cheddar, bacon, salsa pepinillos, cebolla crunch",
+    img: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=400&q=80"
   },
 
   // --- DESAYUNOS ---
@@ -209,55 +237,64 @@ const menuData = [
     title: "Sandwich / Croissant",
     category: "desayunos",
     price: "Consultar",
-    desc: "Mixto o a la plancha"
+    desc: "Mixto o a la plancha fundido",
+    img: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Tostada",
     category: "desayunos",
     price: "Consultar",
-    desc: "Con tomate, aceite o mantequilla y mermelada"
+    desc: "Con tomate natural, aceite de oliva o mantequilla y mermelada",
+    img: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Pincho De Tortilla",
     category: "desayunos",
     price: "Consultar",
-    desc: "Jugosa tortilla de patatas casera"
+    desc: "Jugosa tortilla de patatas artesanal recién hecha",
+    img: "https://images.unsplash.com/photo-1584278860047-22db9ff82bed?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Café",
     category: "desayunos",
     price: "Consultar",
-    desc: "Solo, cortado, con leche, americano"
+    desc: "Solo, cortado, con leche, expreso o americano",
+    img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Churros / Porras",
     category: "desayunos",
     price: "Consultar",
-    desc: "Recién hechos"
+    desc: "Churros y porras artesanas recién elaborados",
+    img: "https://images.unsplash.com/photo-1624300629298-e9de39c13be5?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Infusión",
     category: "desayunos",
     price: "Consultar",
-    desc: "Variedad de tés e infusiones"
+    desc: "Variedad de tés, manzanilla, poleo e infusiones",
+    img: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Huevos Con Bacon",
     category: "desayunos",
     price: "Consultar",
-    desc: "Plato completo para empezar el día con fuerza"
+    desc: "Plato completo de huevos con bacon crujiente",
+    img: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Bolleria",
     category: "desayunos",
     price: "Consultar",
-    desc: "Variedad de bollería del día"
+    desc: "Selección de bollería artesana del día",
+    img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Colacao",
     category: "desayunos",
     price: "Consultar",
-    desc: "Cacao con leche caliente o fría"
+    desc: "Cacao servido con leche bien caliente o fría",
+    img: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=400&q=80"
   },
 
   // --- POSTRES ---
@@ -265,25 +302,29 @@ const menuData = [
     title: "Tarta De Chocolate",
     category: "postres",
     price: "Consultar",
-    desc: "Tarta casera de chocolate intenso"
+    desc: "Tarta casera con cremosa cobertura de chocolate puro",
+    img: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Tarta De Dulce De Leche",
     category: "postres",
     price: "Consultar",
-    desc: "Deliciosa tarta de dulce de leche"
+    desc: "Deliciosa tarta esponjosa rellena de dulce de leche",
+    img: "https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Helado",
     category: "postres",
     price: "Consultar",
-    desc: "Variedad de sabores"
+    desc: "Variedad de artesanos e intensos sabores",
+    img: "https://images.unsplash.com/photo-1560008581-09826d1de69e?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Tequeños De Nutella (6u)",
     category: "postres",
     price: "Consultar",
-    desc: "6 unidades rellenas de suave Nutella"
+    desc: "6 unidades crujientes rellenas de Nutella caliente",
+    img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=400&q=80"
   }
 ];
 
@@ -384,7 +425,7 @@ function initLocationSwitcher() {
   });
 }
 
-// Menu Filtering Logic
+// Menu Filtering Logic with Square Photo Thumbnail rendering
 function renderMenu(category) {
   const grid = document.getElementById("menuGrid");
   if (!grid) return;
@@ -393,6 +434,7 @@ function renderMenu(category) {
 
   grid.innerHTML = filtered.map(item => `
     <div class="menu-card">
+      <img src="${item.img}" alt="${item.title}" class="menu-thumb" loading="lazy">
       <div class="menu-card-body">
         <div class="menu-card-header">
           <h3 class="menu-title">${item.title}</h3>

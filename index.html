@@ -103,7 +103,7 @@
 </head>
 <body>
 
-    <!-- Header / Navbar -->
+    <!-- Header / Navbar (Compact & Elegant Layout) -->
     <header class="header">
         <div class="header-container">
             <a href="#" class="logo">
@@ -119,16 +119,16 @@
                 </select>
             </div>
 
-            <!-- Prominent Direct Call Button -->
+            <!-- Prominent Direct Call Button (Compact & Same Brand Color as Reserve Button) -->
             <a href="tel:+34640844539" class="nav-call-btn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 <span>640 84 45 39</span>
             </a>
 
             <nav class="nav-menu" id="navMenu">
                 <a href="#menu" class="nav-link">Carta</a>
                 <a href="#sedes" class="nav-link">Sedes</a>
-                <a href="#nosotros" class="nav-link">Nuestra Historia</a>
+                <a href="#nosotros" class="nav-link">Historia</a>
                 <a href="#opiniones" class="nav-link">Opiniones</a>
                 <a href="#" class="btn btn-primary nav-cta btn-reserve-modal">Reservar Mesa</a>
             </nav>
@@ -185,7 +185,7 @@
                     <p class="section-desc">Misma calidad, mismo sabor y los mejores ingredientes en ambas sedes.</p>
                 </div>
 
-                <!-- Menu Filter Buttons (Categories match real menu) -->
+                <!-- Menu Filter Buttons -->
                 <div class="menu-filters">
                     <button class="filter-btn active" data-category="hamburguesas">Hamburguesas</button>
                     <button class="filter-btn" data-category="para-compartir">Para Compartir</button>
@@ -197,7 +197,7 @@
 
                 <!-- Menu Items Grid -->
                 <div class="menu-grid" id="menuGrid">
-                    <!-- Dynamic rendering via JS -->
+                    <!-- Dynamic rendering with dish photo cards via JS -->
                 </div>
             </div>
         </section>
@@ -208,11 +208,11 @@
                 <div class="section-header text-center">
                     <span class="section-tag">NUESTRAS UBICACIONES</span>
                     <h2 class="section-title">ELIGE TU SEDE MÁS CERCANA</h2>
-                    <p class="section-desc">Haz clic sobre la tarjeta de cualquier sede para seleccionarla dinámicamente.</p>
+                    <p class="section-desc">Haz clic en cualquier tarjeta de sede para seleccionar la ubicación activa.</p>
                 </div>
 
                 <div class="sedes-grid">
-                    <!-- Sede Leganés Card (Entire card is clickable) -->
+                    <!-- Sede Leganés Card (Entire card is clickable, telephone row removed to avoid click conflict) -->
                     <div class="sede-card clickable-card" id="cardLeganes" data-select="leganes" role="button" tabindex="0">
                         <div class="sede-image-wrapper">
                             <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Bar El Pecador Leganés" loading="lazy">
@@ -227,10 +227,6 @@
                                     <span>Av. de Carmen Martín Gaite, 61, 28919 Leganés, Madrid</span>
                                 </li>
                                 <li>
-                                    <strong>📞 Teléfono:</strong> 
-                                    <span class="phone-link">+34 640 84 45 39</span>
-                                </li>
-                                <li>
                                     <strong>⏰ Horario:</strong> 
                                     <span>Lunes a Domingo: 12:00 – 00:00</span>
                                 </li>
@@ -241,7 +237,7 @@
                         </div>
                     </div>
 
-                    <!-- Sede Alcorcón Card (Entire card is clickable) -->
+                    <!-- Sede Alcorcón Card (Entire card is clickable, telephone row removed to avoid click conflict) -->
                     <div class="sede-card clickable-card" id="cardAlcorcon" data-select="alcorcon" role="button" tabindex="0">
                         <div class="sede-image-wrapper">
                             <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Bar El Pecador Alcorcón" loading="lazy">
@@ -254,10 +250,6 @@
                                 <li>
                                     <strong>📍 Dirección:</strong> 
                                     <span>C. los Nardos, 59, 28925 Alcorcón, Madrid</span>
-                                </li>
-                                <li>
-                                    <strong>📞 Teléfono:</strong> 
-                                    <span class="phone-link">+34 640 84 45 39</span>
                                 </li>
                                 <li>
                                     <strong>⏰ Horario:</strong> 
