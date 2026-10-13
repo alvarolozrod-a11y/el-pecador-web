@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BAR EL PECADOR - APP LOGIC (VANILLA JS MULTISEDE)
+   BAR EL PECADOR - APP LOGIC (VANILLA JS MULTISEDE - HIGH PERFORMANCE FACADE)
    ========================================================================== */
 
 // Data definitions for locations
@@ -26,7 +26,7 @@ const locationsData = {
   }
 };
 
-// Real Menu Data with Custom High-Quality Food Dish Thumbnails
+// Real Menu Data
 const menuData = [
   // --- HAMBURGUESAS ---
   {
@@ -329,6 +329,7 @@ const menuData = [
 ];
 
 let currentActiveLocation = "leganes";
+let mapLoadedInteractive = false;
 
 // DOM Loaded Initialization
 document.addEventListener("DOMContentLoaded", () => {
@@ -337,9 +338,10 @@ document.addEventListener("DOMContentLoaded", () => {
   initMenuFilters();
   initModal();
   initMobileMenu();
+  initMapFacade();
 });
 
-// Function to update active location UI everywhere
+// Function to update active location UI everywhere instantly without heavy iframe reload
 function setActiveLocation(locId) {
   if (!locationsData[locId]) return;
   currentActiveLocation = locId;
@@ -349,11 +351,17 @@ function setActiveLocation(locId) {
   const headerSelect = document.getElementById("headerLocationSelect");
   if (headerSelect) headerSelect.value = locId;
 
-  // Update Map Section
-  const mapIframe = document.getElementById("googleMapIframe");
+  // Update Map Title & Text
   const mapTitle = document.getElementById("mapTitle");
-  if (mapIframe) mapIframe.src = data.embedMapUrl;
-  if (mapTitle) mapTitle.textContent = `Mapa de Ubicación: ${data.name}`;
+  const mapAddressText = document.getElementById("mapAddressText");
+  if (mapTitle) mapTitle.textContent = `Ubicación: ${data.name}`;
+  if (mapAddressText) mapAddressText.textContent = `📍 ${data.address}`;
+
+  // If map is already loaded interactively, update iframe
+  if (mapLoadedInteractive) {
+    const iframe = document.getElementById("googleMapIframe");
+    if (iframe) iframe.src = data.embedMapUrl;
+  }
 
   // Update Clickable Sedes Cards highlight
   document.querySelectorAll(".sede-card").forEach(card => {
@@ -370,6 +378,27 @@ function setActiveLocation(locId) {
   const modalSedeText = document.getElementById("modalSedeText");
   if (modalSedeText) {
     modalSedeText.innerHTML = `Reservando en: <strong>${data.name}</strong>`;
+  }
+}
+
+// Facade Map Logic: Delay iframe load until user requests or interacts
+function loadInteractiveMap() {
+  const container = document.getElementById("mapFacadeContainer");
+  if (!container || mapLoadedInteractive) return;
+
+  const data = locationsData[currentActiveLocation];
+  container.innerHTML = `
+    <iframe id="googleMapIframe" src="${data.embedMapUrl}" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  `;
+  mapLoadedInteractive = true;
+}
+
+function initMapFacade() {
+  const btn = document.getElementById("btnLoadMap");
+  if (btn) {
+    btn.addEventListener("click", () => {
+      loadInteractiveMap();
+    });
   }
 }
 
