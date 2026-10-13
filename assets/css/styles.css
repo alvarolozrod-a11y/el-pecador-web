@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BAR EL PECADOR - MASTER STYLESHEET
+   BAR EL PECADOR - MASTER STYLESHEET (V4 RESTORED)
    ========================================================================== */
 
 :root {
@@ -174,7 +174,6 @@ h1, h2, h3, h4 {
   color: var(--primary);
 }
 
-/* Call Button in Navbar */
 .nav-call-btn {
   display: flex;
   align-items: center;
@@ -335,6 +334,7 @@ h1, h2, h3, h4 {
   cursor: pointer;
   position: relative;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .sede-card.clickable-card:hover {
@@ -492,6 +492,7 @@ h1, h2, h3, h4 {
   font-weight: 700;
   font-size: 0.88rem;
   transition: var(--transition);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .filter-btn.active, .filter-btn:hover {

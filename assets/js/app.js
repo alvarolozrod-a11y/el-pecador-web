@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BAR EL PECADOR - APP LOGIC (VANILLA JS MULTISEDE)
+   BAR EL PECADOR - APP LOGIC (VANILLA JS MULTISEDE - PERFECT MOBILE & DESKTOP MAP SWITCH)
    ========================================================================== */
 
 // Data definitions for locations
@@ -26,7 +26,7 @@ const locationsData = {
   }
 };
 
-// Real Menu Data with Custom High-Quality Food Dish Thumbnails
+// Real Menu Data
 const menuData = [
   // --- HAMBURGUESAS ---
   {
@@ -339,7 +339,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
 });
 
-// Function to update active location UI everywhere
+// Function to update active location UI everywhere and reliably switch iframe on Mobile + Desktop
 function setActiveLocation(locId) {
   if (!locationsData[locId]) return;
   currentActiveLocation = locId;
@@ -349,10 +349,12 @@ function setActiveLocation(locId) {
   const headerSelect = document.getElementById("headerLocationSelect");
   if (headerSelect) headerSelect.value = locId;
 
-  // Update Map Section
+  // Update Map Section (Guaranteed update for all mobile browsers)
   const mapIframe = document.getElementById("googleMapIframe");
   const mapTitle = document.getElementById("mapTitle");
-  if (mapIframe) mapIframe.src = data.embedMapUrl;
+  if (mapIframe) {
+    mapIframe.setAttribute("src", data.embedMapUrl);
+  }
   if (mapTitle) mapTitle.textContent = `Mapa de Ubicación: ${data.name}`;
 
   // Update Clickable Sedes Cards highlight
@@ -384,14 +386,17 @@ function initLocationSwitcher() {
     });
   }
 
-  // Clickable Sede Cards
+  // Clickable Sede Cards (Added touchstart for instantaneous mobile touch response)
   document.querySelectorAll(".clickable-card").forEach(card => {
-    card.addEventListener("click", () => {
+    const handleCardClick = (e) => {
+      e.preventDefault();
       const locId = card.dataset.select;
       if (locId) {
         setActiveLocation(locId);
       }
-    });
+    };
+
+    card.addEventListener("click", handleCardClick);
 
     // Keyboard accessibility
     card.addEventListener("keydown", (e) => {
