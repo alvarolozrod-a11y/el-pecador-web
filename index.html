@@ -6,10 +6,6 @@
     <title>Bar El Pecador | Hamburguesería & Bar de Raciones en Leganés y Alcorcón</title>
     <meta name="description" content="Descubre Bar El Pecador. Las mejores hamburguesas gourmet, raciones, bocatas y desayunos en Leganés y Alcorcón. Pide a domicilio o reserva tu mesa.">
     <meta name="keywords" content="bar el pecador, hamburgueseria leganes, hamburgueseria alcorcon, raciones leganes, bocatas alcorcon, desayunos madrid">
-    
-    <!-- Preconnect for fast map loading when requested -->
-    <link rel="preconnect" href="https://maps.google.com">
-    <link rel="preconnect" href="https://images.unsplash.com">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Bar El Pecador | Hamburguesería & Raciones">
@@ -107,7 +103,7 @@
 </head>
 <body>
 
-    <!-- Header / Navbar (Compact & Elegant Layout) -->
+    <!-- Header / Navbar -->
     <header class="header">
         <div class="header-container">
             <a href="#" class="logo">
@@ -123,7 +119,7 @@
                 </select>
             </div>
 
-            <!-- Direct Call Button -->
+            <!-- Prominent Direct Call Button -->
             <a href="tel:+34640844539" class="nav-call-btn">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 <span>640 84 45 39</span>
@@ -156,7 +152,7 @@
                     Hamburguesas gourmet, raciones para compartir, bocatas y desayunos. Sabor auténtico en Leganés y Alcorcón.
                 </p>
 
-                <!-- Sedes Section in Hero -->
+                <!-- Sedes Section in Hero (No iframe map for ultra performance) -->
                 <div class="hero-sedes-wrapper">
                     <div class="sedes-grid">
                         <!-- Sede Leganés Card -->
@@ -206,21 +202,6 @@
                                 <div class="sede-actions">
                                     <a href="https://maps.app.goo.gl/6xt5AqrtAcA1sL4a6" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" onclick="event.stopPropagation();">Cómo Llegar (Maps)</a>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Map Container with High-Performance Facade Pattern -->
-                    <div class="map-wrapper">
-                        <div class="map-header text-left">
-                            <h3 id="mapTitle">Ubicación: Bar El Pecador - Leganés</h3>
-                        </div>
-                        <div class="map-facade-container" id="mapFacadeContainer">
-                            <div class="map-facade-overlay">
-                                <p id="mapAddressText">📍 Av. de Carmen Martín Gaite, 61, Leganés, Madrid</p>
-                                <button class="btn btn-primary btn-sm" id="btnLoadMap">
-                                    🗺️ Cargar Mapa Interactivo
-                                </button>
                             </div>
                         </div>
                     </div>
