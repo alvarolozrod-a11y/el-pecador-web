@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BAR EL PECADOR - MASTER STYLESHEET (NO RESERVA BUTTONS + CAROUSEL + CLEAN BADGE)
+   EL PECADOR - MASTER STYLESHEET (UPDATED WITH LARGER BRAND & CLOSE CALL BUTTON)
    ========================================================================== */
 
 :root {
@@ -159,18 +159,20 @@ h1, h2, h3, h4 {
   color: var(--primary);
 }
 
+/* Call Button placed next to the navigation index links */
 .nav-call-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 6px;
   background-color: var(--primary);
   color: var(--white);
-  padding: 7px 14px;
+  padding: 6px 14px;
   border-radius: var(--radius-sm);
   font-weight: 700;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   transition: var(--transition);
   white-space: nowrap;
+  margin-left: 8px;
 }
 
 .nav-call-btn:hover {
@@ -211,7 +213,7 @@ h1, h2, h3, h4 {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
 }
 
 .nav-link {
@@ -265,24 +267,25 @@ h1, h2, h3, h4 {
   width: 100%;
 }
 
-/* Brand Name prominently displayed on initial load */
+/* Restaurant Brand Name: Significantly Larger on Page Load */
 .brand-hero-name {
-  font-size: 4.8rem;
+  font-size: 6.2rem;
   color: var(--white);
-  letter-spacing: 2px;
-  line-height: 1;
-  margin-bottom: 8px;
+  letter-spacing: 3px;
+  line-height: 0.95;
+  margin-bottom: 12px;
   text-transform: uppercase;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
 }
 
-/* Clean badge: Red text without border or background box */
+/* Clean badge */
 .clean-badge {
   display: inline-block;
   color: var(--primary);
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 800;
   letter-spacing: 1.5px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   text-transform: uppercase;
 }
 
@@ -632,7 +635,7 @@ h1, h2, h3, h4 {
 
 .review-slide {
   min-width: 100%;
-  box-sizing: border-border-box;
+  box-sizing: border-box;
 }
 
 .review-card {
@@ -807,7 +810,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 768px) {
   .brand-hero-name {
-    font-size: 3.2rem;
+    font-size: 3.8rem;
   }
 
   .hero-title {
@@ -836,6 +839,10 @@ h1, h2, h3, h4 {
 
   .nav-menu.active {
     display: flex;
+  }
+
+  .nav-call-btn {
+    margin-left: 0;
   }
 
   .menu-card {

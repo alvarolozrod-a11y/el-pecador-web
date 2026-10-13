@@ -1,12 +1,12 @@
 /* ==========================================================================
-   BAR EL PECADOR - APP LOGIC (MULTISEDE + REVIEWS CAROUSEL WITH SWIPE)
+   EL PECADOR - APP LOGIC (MULTISEDE + REVIEWS CAROUSEL WITH SWIPE)
    ========================================================================== */
 
 // Data definitions for locations
 const locationsData = {
   leganes: {
     id: "leganes",
-    name: "Bar El Pecador - Leganés",
+    name: "El Pecador - Leganés",
     shortName: "Leganés",
     address: "Av. de Carmen Martín Gaite, 61, 28919 Leganés, Madrid",
     phone: "+34 640 84 45 39",
@@ -16,7 +16,7 @@ const locationsData = {
   },
   alcorcon: {
     id: "alcorcon",
-    name: "Bar El Pecador - Alcorcón",
+    name: "El Pecador - Alcorcón",
     shortName: "Alcorcón",
     address: "C. los Nardos, 59, 28925 Alcorcón, Madrid",
     phone: "+34 640 84 45 39",
@@ -464,8 +464,6 @@ function initReviewsCarousel() {
   let currentIndex = 0;
   let autoSlideInterval;
   let startX = 0;
-  let currentTranslate = 0;
-  let prevTranslate = 0;
   let isDragging = false;
 
   // Create Navigation Dots
@@ -521,7 +519,6 @@ function initReviewsCarousel() {
   const trackWrapper = document.querySelector(".carousel-track-wrapper");
 
   if (trackWrapper) {
-    // Touch Events
     trackWrapper.addEventListener("touchstart", (e) => {
       startX = e.touches[0].clientX;
       isDragging = true;
@@ -543,7 +540,6 @@ function initReviewsCarousel() {
       }
     });
 
-    // Mouse Drag Events
     trackWrapper.addEventListener("mousedown", (e) => {
       startX = e.clientX;
       isDragging = true;
