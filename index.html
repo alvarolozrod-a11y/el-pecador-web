@@ -6,10 +6,6 @@
     <title>Bar El Pecador | Hamburguesería & Bar de Raciones en Leganés y Alcorcón</title>
     <meta name="description" content="Descubre Bar El Pecador. Las mejores hamburguesas gourmet, raciones, bocatas y desayunos en Leganés y Alcorcón. Pide a domicilio o reserva tu mesa.">
     <meta name="keywords" content="bar el pecador, hamburgueseria leganes, hamburgueseria alcorcon, raciones leganes, bocatas alcorcon, desayunos madrid">
-    
-    <!-- Preconnect for fast map & asset loading -->
-    <link rel="preconnect" href="https://maps.google.com">
-    <link rel="preconnect" href="https://images.unsplash.com">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Bar El Pecador | Hamburguesería & Raciones">
@@ -107,7 +103,7 @@
 </head>
 <body>
 
-    <!-- Header / Navbar (Compact & Fast) -->
+    <!-- Header / Navbar -->
     <header class="header">
         <div class="header-container">
             <a href="#" class="logo">
@@ -146,7 +142,7 @@
     </header>
 
     <main>
-        <!-- Hero Section with Sedes Section Integrated -->
+        <!-- Hero Section with Sedes Section Integrated directly inside -->
         <section class="hero-section" id="sedes">
             <div class="hero-overlay"></div>
             <div class="hero-content">
@@ -156,7 +152,7 @@
                     Hamburguesas gourmet, raciones para compartir, bocatas y desayunos. Sabor auténtico en Leganés y Alcorcón.
                 </p>
 
-                <!-- Sedes Grid Component with Optimized Cards -->
+                <!-- Sedes Section in Hero with Direct Iframe Map restored -->
                 <div class="hero-sedes-wrapper">
                     <div class="sedes-grid">
                         <!-- Sede Leganés Card -->
@@ -210,20 +206,12 @@
                         </div>
                     </div>
 
-                    <!-- Ultra Fast Map Facade with Custom Specific Image for Each Venue -->
+                    <!-- Direct Google Map Frame restored -->
                     <div class="map-wrapper">
                         <div class="map-header text-left">
-                            <h3 id="mapTitle">Ubicación: Bar El Pecador - Leganés</h3>
+                            <h3 id="mapTitle">Mapa de Ubicación: Bar El Pecador - Leganés</h3>
                         </div>
-                        <div class="map-facade-container" id="mapFacadeContainer">
-                            <img src="assets/images/mapa-leganes.jpg" alt="Mapa Leganés" id="mapFacadeImg" class="map-facade-img">
-                            <div class="map-facade-overlay">
-                                <p id="mapAddressText">📍 Av. de Carmen Martín Gaite, 61, Leganés, Madrid</p>
-                                <button class="btn btn-primary btn-sm" id="btnLoadMap">
-                                    🗺️ Cargar Mapa Interactivo
-                                </button>
-                            </div>
-                        </div>
+                        <iframe id="googleMapIframe" src="https://maps.google.com/maps?q=40.3455389,-3.7451353&z=16&output=embed" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
 

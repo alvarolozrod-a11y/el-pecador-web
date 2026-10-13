@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BAR EL PECADOR - MASTER STYLESHEET (OPTIMIZED FOR MAXIMUM DESKTOP PERFORMANCE)
+   BAR EL PECADOR - MASTER STYLESHEET (OPTIMIZED V4)
    ========================================================================== */
 
 :root {
@@ -323,7 +323,7 @@ h1, h2, h3, h4 {
   margin-bottom: 24px;
 }
 
-/* Fully GPU-Hardware-Accelerated Location Cards for 60fps Desktop Hover/Click */
+/* Hardware Accelerated Sede Cards for 60fps clicks on desktop and mobile */
 .sede-card.clickable-card {
   background: #1A1A22;
   border-radius: var(--radius-md);
@@ -419,9 +419,9 @@ h1, h2, h3, h4 {
   gap: 10px;
 }
 
-/* Map Facade Styles with Dynamic Location Image Preview */
 .map-wrapper {
-  background: rgba(26, 26, 34, 0.95);
+  background: rgba(26, 26, 34, 0.9);
+  backdrop-filter: blur(10px);
   border-radius: var(--radius-md);
   border: 1px solid var(--border-color);
   overflow: hidden;
@@ -435,44 +435,6 @@ h1, h2, h3, h4 {
 .map-header h3 {
   font-size: 1.2rem;
   color: var(--white);
-}
-
-.map-facade-container {
-  position: relative;
-  height: 320px;
-  background: #181820;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.map-facade-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.3s ease;
-}
-
-.map-facade-overlay {
-  position: relative;
-  z-index: 2;
-  background: rgba(15, 15, 18, 0.85);
-  backdrop-filter: blur(8px);
-  border: 1px solid var(--border-color);
-  padding: 20px 28px;
-  border-radius: var(--radius-md);
-  text-align: center;
-  max-width: 90%;
-}
-
-.map-facade-overlay p {
-  color: var(--text-main);
-  font-weight: 600;
-  font-size: 0.95rem;
-  margin-bottom: 12px;
 }
 
 .hero-ctas {
@@ -544,6 +506,7 @@ h1, h2, h3, h4 {
   gap: 20px;
 }
 
+/* Dish Card Layout with Square Photo Thumbnail */
 .menu-card {
   background-color: var(--card-bg);
   border-radius: var(--radius-md);
@@ -696,7 +659,7 @@ h1, h2, h3, h4 {
   justify-content: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: var(--transition);
 }
 
 .modal.active {
