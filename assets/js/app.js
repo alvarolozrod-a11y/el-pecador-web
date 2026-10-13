@@ -1,8 +1,8 @@
 /* ==========================================================================
-   BAR EL PECADOR - APP LOGIC (VANILLA JS MULTISEDE - PERFECT MOBILE & DESKTOP MAP SWITCH)
+   BAR EL PECADOR - APP LOGIC (VANILLA JS - ULTRA FAST & FACADE MAP FOR EACH SEDE)
    ========================================================================== */
 
-// Data definitions for locations
+// Data definitions for locations with corresponding screenshot map facades
 const locationsData = {
   leganes: {
     id: "leganes",
@@ -12,7 +12,8 @@ const locationsData = {
     phone: "+34 640 84 45 39",
     hours: "Lunes a Domingo: 12:00 – 00:00",
     mapsUrl: "https://maps.app.goo.gl/KsuvHFHtk4R83ind6",
-    embedMapUrl: "https://maps.google.com/maps?q=40.3455389,-3.7451353&z=16&output=embed"
+    embedMapUrl: "https://maps.google.com/maps?q=40.3455389,-3.7451353&z=16&output=embed",
+    facadeImg: "assets/images/mapa-leganes.jpg"
   },
   alcorcon: {
     id: "alcorcon",
@@ -22,7 +23,8 @@ const locationsData = {
     phone: "+34 640 84 45 39",
     hours: "Lunes a Domingo: 12:00 – 00:00",
     mapsUrl: "https://maps.app.goo.gl/6xt5AqrtAcA1sL4a6",
-    embedMapUrl: "https://maps.google.com/maps?q=40.3568875,-3.8069828&z=16&output=embed"
+    embedMapUrl: "https://maps.google.com/maps?q=40.3568875,-3.8069828&z=16&output=embed",
+    facadeImg: "assets/images/mapa-alcorcon.jpg"
   }
 };
 
@@ -329,6 +331,7 @@ const menuData = [
 ];
 
 let currentActiveLocation = "leganes";
+let isMapLoadedInteractive = false;
 
 // DOM Loaded Initialization
 document.addEventListener("DOMContentLoaded", () => {
@@ -337,9 +340,10 @@ document.addEventListener("DOMContentLoaded", () => {
   initMenuFilters();
   initModal();
   initMobileMenu();
+  initMapFacade();
 });
 
-// Function to update active location UI everywhere and reliably switch iframe on Mobile + Desktop
+// Function to update active location UI instantly without lag
 function setActiveLocation(locId) {
   if (!locationsData[locId]) return;
   currentActiveLocation = locId;
@@ -349,18 +353,29 @@ function setActiveLocation(locId) {
   const headerSelect = document.getElementById("headerLocationSelect");
   if (headerSelect) headerSelect.value = locId;
 
-  // Update Map Section (Guaranteed update for all mobile browsers)
-  const mapIframe = document.getElementById("googleMapIframe");
+  // Update Map Title & Text
   const mapTitle = document.getElementById("mapTitle");
-  if (mapIframe) {
-    mapIframe.setAttribute("src", data.embedMapUrl);
+  const mapAddressText = document.getElementById("mapAddressText");
+  if (mapTitle) mapTitle.textContent = `Ubicación: ${data.name}`;
+  if (mapAddressText) mapAddressText.textContent = `📍 ${data.address}`;
+
+  // Update Facade Image according to active location (Map 1 for Leganés, Map 2 for Alcorcón)
+  const mapFacadeImg = document.getElementById("mapFacadeImg");
+  if (mapFacadeImg && !isMapLoadedInteractive) {
+    mapFacadeImg.src = data.facadeImg;
   }
-  if (mapTitle) mapTitle.textContent = `Mapa de Ubicación: ${data.name}`;
+
+  // If map is already loaded interactively, update iframe
+  if (isMapLoadedInteractive) {
+    const iframe = document.getElementById("googleMapIframe");
+    if (iframe) iframe.src = data.embedMapUrl;
+  }
 
   // Update Clickable Sedes Cards highlight
-  document.querySelectorAll(".sede-card").forEach(card => {
-    card.classList.remove("active-card");
-  });
+  const cards = document.querySelectorAll(".sede-card");
+  for (let i = 0; i < cards.length; i++) {
+    cards[i].classList.remove("active-card");
+  }
   const activeCard = document.getElementById(locId === "leganes" ? "cardLeganes" : "cardAlcorcon");
   if (activeCard) activeCard.classList.add("active-card");
 
@@ -375,6 +390,28 @@ function setActiveLocation(locId) {
   }
 }
 
+// Facade Map Logic
+function loadInteractiveMap() {
+  const container = document.getElementById("mapFacadeContainer");
+  if (!container || isMapLoadedInteractive) return;
+
+  const data = locationsData[currentActiveLocation];
+  container.innerHTML = `
+    <iframe id="googleMapIframe" src="${data.embedMapUrl}" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  `;
+  isMapLoadedInteractive = true;
+}
+
+function initMapFacade() {
+  const btn = document.getElementById("btnLoadMap");
+  if (btn) {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      loadInteractiveMap();
+    });
+  }
+}
+
 function initLocationSwitcher() {
   setActiveLocation("leganes");
 
@@ -386,17 +423,15 @@ function initLocationSwitcher() {
     });
   }
 
-  // Clickable Sede Cards (Added touchstart for instantaneous mobile touch response)
-  document.querySelectorAll(".clickable-card").forEach(card => {
-    const handleCardClick = (e) => {
-      e.preventDefault();
+  // Clickable Sede Cards with ultra-fast click listener
+  const clickableCards = document.querySelectorAll(".clickable-card");
+  clickableCards.forEach(card => {
+    card.addEventListener("click", (e) => {
       const locId = card.dataset.select;
       if (locId) {
         setActiveLocation(locId);
       }
-    };
-
-    card.addEventListener("click", handleCardClick);
+    });
 
     // Keyboard accessibility
     card.addEventListener("keydown", (e) => {
@@ -409,7 +444,7 @@ function initLocationSwitcher() {
   });
 }
 
-// Menu Filtering Logic with Square Photo Thumbnail rendering
+// Menu Filtering Logic
 function renderMenu(category) {
   const grid = document.getElementById("menuGrid");
   if (!grid) return;
