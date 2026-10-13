@@ -119,15 +119,15 @@
                 </select>
             </div>
 
-            <!-- Prominent Direct Call Button (Compact & Same Brand Color as Reserve Button) -->
+            <!-- Prominent Direct Call Button -->
             <a href="tel:+34640844539" class="nav-call-btn">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 <span>640 84 45 39</span>
             </a>
 
             <nav class="nav-menu" id="navMenu">
-                <a href="#menu" class="nav-link">Carta</a>
                 <a href="#sedes" class="nav-link">Sedes</a>
+                <a href="#menu" class="nav-link">Carta</a>
                 <a href="#nosotros" class="nav-link">Historia</a>
                 <a href="#opiniones" class="nav-link">Opiniones</a>
                 <a href="#" class="btn btn-primary nav-cta btn-reserve-modal">Reservar Mesa</a>
@@ -142,8 +142,8 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero-section">
+        <!-- Hero Section with Sedes Section Integrated directly inside -->
+        <section class="hero-section" id="sedes">
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <div class="badge">🔥 EL TEMPLO DEL PECADO GASTRONÓMICO</div>
@@ -152,20 +152,66 @@
                     Hamburguesas gourmet, raciones para compartir, bocatas y desayunos. Sabor auténtico en Leganés y Alcorcón.
                 </p>
 
-                <!-- Location Selector Hero Cards -->
-                <div class="hero-location-card">
-                    <span class="hero-location-title">Haz clic en la sede para seleccionarla:</span>
-                    <div class="location-tabs">
-                        <button class="tab-btn active" data-location="leganes">
-                            📍 Sede Leganés
-                        </button>
-                        <button class="tab-btn" data-location="alcorcon">
-                            📍 Sede Alcorcón
-                        </button>
+                <!-- Full Sedes Section Moved Here -->
+                <div class="hero-sedes-wrapper">
+                    <div class="sedes-grid">
+                        <!-- Sede Leganés Card -->
+                        <div class="sede-card clickable-card" id="cardLeganes" data-select="leganes" role="button" tabindex="0">
+                            <div class="sede-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Bar El Pecador Leganés" loading="lazy">
+                                <span class="badge-tag">Sede Leganés</span>
+                                <div class="card-selected-indicator">✓ SEDE SELECCIONADA</div>
+                            </div>
+                            <div class="sede-content text-left">
+                                <h3>Bar El Pecador - Leganés</h3>
+                                <ul class="sede-details">
+                                    <li>
+                                        <strong>📍 Dirección:</strong> 
+                                        <span>Av. de Carmen Martín Gaite, 61, 28919 Leganés, Madrid</span>
+                                    </li>
+                                    <li>
+                                        <strong>⏰ Horario:</strong> 
+                                        <span>Lunes a Domingo: 12:00 – 00:00</span>
+                                    </li>
+                                </ul>
+                                <div class="sede-actions">
+                                    <a href="https://maps.app.goo.gl/KsuvHFHtk4R83ind6" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" onclick="event.stopPropagation();">Cómo Llegar (Maps)</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sede Alcorcón Card -->
+                        <div class="sede-card clickable-card" id="cardAlcorcon" data-select="alcorcon" role="button" tabindex="0">
+                            <div class="sede-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Bar El Pecador Alcorcón" loading="lazy">
+                                <span class="badge-tag">Sede Alcorcón</span>
+                                <div class="card-selected-indicator">✓ SEDE SELECCIONADA</div>
+                            </div>
+                            <div class="sede-content text-left">
+                                <h3>Bar El Pecador - Alcorcón</h3>
+                                <ul class="sede-details">
+                                    <li>
+                                        <strong>📍 Dirección:</strong> 
+                                        <span>C. los Nardos, 59, 28925 Alcorcón, Madrid</span>
+                                    </li>
+                                    <li>
+                                        <strong>⏰ Horario:</strong> 
+                                        <span>Lunes a Domingo: 12:00 – 00:00</span>
+                                    </li>
+                                </ul>
+                                <div class="sede-actions">
+                                    <a href="https://maps.app.goo.gl/6xt5AqrtAcA1sL4a6" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" onclick="event.stopPropagation();">Cómo Llegar (Maps)</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="active-location-info" id="heroLocationInfo">
-                        <!-- Filled by JS -->
+                    <!-- Dynamic Map Frame -->
+                    <div class="map-wrapper">
+                        <div class="map-header text-left">
+                            <h3 id="mapTitle">Mapa de Ubicación: Bar El Pecador - Leganés</h3>
+                        </div>
+                        <iframe id="googleMapIframe" src="https://maps.google.com/maps?q=40.3455389,-3.7451353&z=16&output=embed" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
 
@@ -197,78 +243,7 @@
 
                 <!-- Menu Items Grid -->
                 <div class="menu-grid" id="menuGrid">
-                    <!-- Dynamic rendering with dish photo cards via JS -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Sedes Section -->
-        <section class="sedes-section" id="sedes">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">NUESTRAS UBICACIONES</span>
-                    <h2 class="section-title">ELIGE TU SEDE MÁS CERCANA</h2>
-                    <p class="section-desc">Haz clic en cualquier tarjeta de sede para seleccionar la ubicación activa.</p>
-                </div>
-
-                <div class="sedes-grid">
-                    <!-- Sede Leganés Card (Entire card is clickable, telephone row removed to avoid click conflict) -->
-                    <div class="sede-card clickable-card" id="cardLeganes" data-select="leganes" role="button" tabindex="0">
-                        <div class="sede-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Bar El Pecador Leganés" loading="lazy">
-                            <span class="badge-tag">Sede Leganés</span>
-                            <div class="card-selected-indicator">✓ SEDE SELECCIONADA</div>
-                        </div>
-                        <div class="sede-content">
-                            <h3>Bar El Pecador - Leganés</h3>
-                            <ul class="sede-details">
-                                <li>
-                                    <strong>📍 Dirección:</strong> 
-                                    <span>Av. de Carmen Martín Gaite, 61, 28919 Leganés, Madrid</span>
-                                </li>
-                                <li>
-                                    <strong>⏰ Horario:</strong> 
-                                    <span>Lunes a Domingo: 12:00 – 00:00</span>
-                                </li>
-                            </ul>
-                            <div class="sede-actions">
-                                <a href="https://maps.app.goo.gl/KsuvHFHtk4R83ind6" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" onclick="event.stopPropagation();">Cómo Llegar (Maps)</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sede Alcorcón Card (Entire card is clickable, telephone row removed to avoid click conflict) -->
-                    <div class="sede-card clickable-card" id="cardAlcorcon" data-select="alcorcon" role="button" tabindex="0">
-                        <div class="sede-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Bar El Pecador Alcorcón" loading="lazy">
-                            <span class="badge-tag">Sede Alcorcón</span>
-                            <div class="card-selected-indicator">✓ SEDE SELECCIONADA</div>
-                        </div>
-                        <div class="sede-content">
-                            <h3>Bar El Pecador - Alcorcón</h3>
-                            <ul class="sede-details">
-                                <li>
-                                    <strong>📍 Dirección:</strong> 
-                                    <span>C. los Nardos, 59, 28925 Alcorcón, Madrid</span>
-                                </li>
-                                <li>
-                                    <strong>⏰ Horario:</strong> 
-                                    <span>Lunes a Domingo: 12:00 – 00:00</span>
-                                </li>
-                            </ul>
-                            <div class="sede-actions">
-                                <a href="https://maps.app.goo.gl/6xt5AqrtAcA1sL4a6" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" onclick="event.stopPropagation();">Cómo Llegar (Maps)</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Dynamic Map Frame -->
-                <div class="map-wrapper">
-                    <div class="map-header">
-                        <h3 id="mapTitle">Mapa de Ubicación: Bar El Pecador - Leganés</h3>
-                    </div>
-                    <iframe id="googleMapIframe" src="https://maps.google.com/maps?q=40.3455389,-3.7451353&z=16&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- Dynamic rendering via JS -->
                 </div>
             </div>
         </section>
@@ -396,8 +371,8 @@
             <div class="footer-links">
                 <h4>Enlaces Rápidos</h4>
                 <ul>
-                    <li><a href="#menu">Carta</a></li>
                     <li><a href="#sedes">Ubicaciones</a></li>
+                    <li><a href="#menu">Carta</a></li>
                     <li><a href="#nosotros">Historia</a></li>
                     <li><a href="#opiniones">Opiniones</a></li>
                 </ul>

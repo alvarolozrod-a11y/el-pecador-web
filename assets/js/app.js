@@ -349,20 +349,6 @@ function setActiveLocation(locId) {
   const headerSelect = document.getElementById("headerLocationSelect");
   if (headerSelect) headerSelect.value = locId;
 
-  // Update Hero Tabs
-  document.querySelectorAll(".tab-btn").forEach(btn => {
-    btn.classList.toggle("active", btn.dataset.location === locId);
-  });
-
-  // Update Hero location info text
-  const heroInfo = document.getElementById("heroLocationInfo");
-  if (heroInfo) {
-    heroInfo.innerHTML = `
-      <p>📍 <strong>${data.address}</strong></p>
-      <p>📞 Tel: <a href="tel:${data.phone}">${data.phone}</a> | ⏰ ${data.hours}</p>
-    `;
-  }
-
   // Update Map Section
   const mapIframe = document.getElementById("googleMapIframe");
   const mapTitle = document.getElementById("mapTitle");
@@ -397,13 +383,6 @@ function initLocationSwitcher() {
       setActiveLocation(e.target.value);
     });
   }
-
-  // Hero Tabs Listener
-  document.querySelectorAll(".tab-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      setActiveLocation(btn.dataset.location);
-    });
-  });
 
   // Clickable Sede Cards
   document.querySelectorAll(".clickable-card").forEach(card => {
