@@ -26,70 +26,264 @@ const locationsData = {
   }
 };
 
-// Data menu items
+// Real Menu Data from Images
 const menuData = [
+  // --- HAMBURGUESAS ---
   {
-    title: "Tequeños Artesanales",
-    category: "entrantes",
-    price: "8.90 €",
-    desc: "6 palitos de queso crujientes acompañados de nuestra mermelada picante de guayaba.",
-    img: "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=600&q=80"
+    title: "Pollo",
+    category: "hamburguesas",
+    price: "€14.00",
+    desc: "Cheddar, tomate, cebolla"
   },
   {
-    title: "Nachos Pecador",
-    category: "entrantes",
-    price: "11.50 €",
-    desc: "Totopos crujientes, queso fundido, chili con carne, guacamole, crema agria y jalapeños.",
-    img: "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=600&q=80"
+    title: "Bacon",
+    category: "hamburguesas",
+    price: "€14.00",
+    desc: "Cheddar, bacon, cebolla crunch"
   },
   {
-    title: "Patatas Bacon & Cheese",
-    category: "entrantes",
-    price: "9.50 €",
-    desc: "Patatas natural cortadas a mano, mezcladas con mix de quesos y bacón crujiente.",
-    img: "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80"
+    title: "Cecina",
+    category: "hamburguesas",
+    price: "€14.00",
+    desc: "Cecina, queso de cabra, cebolla caramelizada"
   },
   {
-    title: "La Pecadora Burger",
-    category: "burgers",
-    price: "13.90 €",
-    desc: "200g carne de vaca madurada, doble cheddar, bacon ahumado, cebolla caramelizada y salsa especial.",
-    img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80"
+    title: "Sweet",
+    category: "hamburguesas",
+    price: "€14.00",
+    desc: "Mermelada, queso crema, bacon, aros de cebolla"
   },
   {
-    title: "Trufa & Parmesano Burger",
-    category: "burgers",
-    price: "14.50 €",
-    desc: "200g carne de vaca, crema de trufa negra, lascas de parmesano reggiano y canónigos.",
-    img: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=600&q=80"
+    title: "Mexicana",
+    category: "hamburguesas",
+    price: "€14.00",
+    desc: "Relish, jalapeños, guacamole, tomate, cebolla, mostaza dulce"
   },
   {
-    title: "Crispy Chicken BBQ",
-    category: "burgers",
-    price: "12.90 €",
-    desc: "Contramuslo de pollo crujiente al estilo marinada sureña, ensalada coleslaw y salsa barbacoa dulce.",
-    img: "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=600&q=80"
+    title: "Triple",
+    category: "hamburguesas",
+    price: "€14.00",
+    desc: "Triple carne, triple cheddar, bacon, cebolla crunch, huevo"
   },
   {
-    title: "Tarta de Queso Fluida",
+    title: "Especial",
+    category: "hamburguesas",
+    price: "€14.00",
+    desc: "Triple carne, champiñones, guacamole, mozzarella"
+  },
+
+  // --- PARA COMPARTIR ---
+  {
+    title: "Patatas",
+    category: "para-compartir",
+    price: "€6.00",
+    desc: "Patatas fritas crujientes"
+  },
+  {
+    title: "Patatas All-Oli",
+    category: "para-compartir",
+    price: "€6.00",
+    desc: "Patatas caseras acompañadas de salsa alioli"
+  },
+  {
+    title: "Patatas Bravas",
+    category: "para-compartir",
+    price: "€6.00",
+    desc: "Con nuestra tradicional salsa brava picante"
+  },
+  {
+    title: "Patatas Braviolos",
+    category: "para-compartir",
+    price: "€6.00",
+    desc: "Combinación perfecta de salsa brava y alioli"
+  },
+  {
+    title: "Croquetón De Jamón (4u)",
+    category: "para-compartir",
+    price: "€6.00",
+    desc: "4 unidades de croquetones cremosos de jamón ibérico"
+  },
+  {
+    title: "Salchipapas",
+    category: "para-compartir",
+    price: "€7.00",
+    desc: "Patatas fritas con salchichas troceadas y salsas"
+  },
+  {
+    title: "Aros De Cebolla",
+    category: "para-compartir",
+    price: "€7.00",
+    desc: "Aros de cebolla empanados y crujientes"
+  },
+  {
+    title: "Tequeños De Queso (6u)",
+    category: "para-compartir",
+    price: "€7.00",
+    desc: "6 unidades de deditos de queso artesanal"
+  },
+  {
+    title: "Patatas Cheddar Y Bacon",
+    category: "para-compartir",
+    price: "€8.00",
+    desc: "Patatas con salsa cheddar caliente y bacon crujiente"
+  },
+  {
+    title: "Oreja",
+    category: "para-compartir",
+    price: "€9.00",
+    desc: "Oreja a la plancha bien dorada y sazonada"
+  },
+  {
+    title: "Alitas",
+    category: "para-compartir",
+    price: "€9.00",
+    desc: "Alitas de pollo crujientes"
+  },
+  {
+    title: "Fingers De Pollo",
+    category: "para-compartir",
+    price: "€9.00",
+    desc: "Tiras de pechuga de pollo empanadas"
+  },
+  {
+    title: "Calamares",
+    category: "para-compartir",
+    price: "€14.00",
+    desc: "Ración de calamares a la romana"
+  },
+
+  // --- BOCATAS ---
+  {
+    title: "Lomo",
+    category: "bocatas",
+    price: "€5.50",
+    desc: "Bocata recién hecho de lomo a la plancha"
+  },
+  {
+    title: "Bacon",
+    category: "bocatas",
+    price: "€5.50",
+    desc: "Bocata crujiente de bacon"
+  },
+  {
+    title: "Panceta",
+    category: "bocatas",
+    price: "€5.50",
+    desc: "Bocata de panceta sabrosa"
+  },
+  {
+    title: "Pollo",
+    category: "bocatas",
+    price: "€7.50",
+    desc: "Bocata de pechuga de pollo a la plancha"
+  },
+  {
+    title: "Jamón",
+    category: "bocatas",
+    price: "€7.50",
+    desc: "Bocata de jamón ibérico"
+  },
+  {
+    title: "Calamares",
+    category: "bocatas",
+    price: "€7.50",
+    desc: "El clásico bocadillo de calamares"
+  },
+
+  // --- PERRITOS ---
+  {
+    title: "Perrito Simple",
+    category: "perritos",
+    price: "€5.00",
+    desc: "Ketchup, mostaza, mayonesa, cebolla crunch"
+  },
+  {
+    title: "Perrito Especial",
+    category: "perritos",
+    price: "€7.00",
+    desc: "Ketchup, mostaza, mayonesa, salsa cheddar, bacon, salsa pepinillos, cebolla crunch"
+  },
+
+  // --- DESAYUNOS ---
+  {
+    title: "Sandwich / Croissant",
+    category: "desayunos",
+    price: "Consultar",
+    desc: "Mixto o a la plancha"
+  },
+  {
+    title: "Tostada",
+    category: "desayunos",
+    price: "Consultar",
+    desc: "Con tomate, aceite o mantequilla y mermelada"
+  },
+  {
+    title: "Pincho De Tortilla",
+    category: "desayunos",
+    price: "Consultar",
+    desc: "Jugosa tortilla de patatas casera"
+  },
+  {
+    title: "Café",
+    category: "desayunos",
+    price: "Consultar",
+    desc: "Solo, cortado, con leche, americano"
+  },
+  {
+    title: "Churros / Porras",
+    category: "desayunos",
+    price: "Consultar",
+    desc: "Recién hechos"
+  },
+  {
+    title: "Infusión",
+    category: "desayunos",
+    price: "Consultar",
+    desc: "Variedad de tés e infusiones"
+  },
+  {
+    title: "Huevos Con Bacon",
+    category: "desayunos",
+    price: "Consultar",
+    desc: "Plato completo para empezar el día con fuerza"
+  },
+  {
+    title: "Bolleria",
+    category: "desayunos",
+    price: "Consultar",
+    desc: "Variedad de bollería del día"
+  },
+  {
+    title: "Colacao",
+    category: "desayunos",
+    price: "Consultar",
+    desc: "Cacao con leche caliente o fría"
+  },
+
+  // --- POSTRES ---
+  {
+    title: "Tarta De Chocolate",
     category: "postres",
-    price: "6.50 €",
-    desc: "Nuestra famosa tarta horneada estilo San Sebastián con corazón cremoso.",
-    img: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=600&q=80"
+    price: "Consultar",
+    desc: "Tarta casera de chocolate intenso"
   },
   {
-    title: "Cookie Monster Bowl",
+    title: "Tarta De Dulce De Leche",
     category: "postres",
-    price: "6.90 €",
-    desc: "Galleta artesanal tibia de chocolate con helado de vainilla y sirope de Kinder Bueno.",
-    img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80"
+    price: "Consultar",
+    desc: "Deliciosa tarta de dulce de leche"
   },
   {
-    title: "Cerveza IPAs Artesana",
-    category: "bebidas",
-    price: "4.00 €",
-    desc: "Pinta de cerveza rubia artesana tirada con maestría.",
-    img: "https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&fit=crop&w=600&q=80"
+    title: "Helado",
+    category: "postres",
+    price: "Consultar",
+    desc: "Variedad de sabores"
+  },
+  {
+    title: "Tequeños De Nutella (6u)",
+    category: "postres",
+    price: "Consultar",
+    desc: "6 unidades rellenas de suave Nutella"
   }
 ];
 
@@ -98,7 +292,7 @@ let currentActiveLocation = "leganes";
 // DOM Loaded Initialization
 document.addEventListener("DOMContentLoaded", () => {
   initLocationSwitcher();
-  renderMenu("all");
+  renderMenu("hamburguesas");
   initMenuFilters();
   initModal();
   initMobileMenu();
@@ -134,7 +328,7 @@ function setActiveLocation(locId) {
   if (mapIframe) mapIframe.src = data.embedMapUrl;
   if (mapTitle) mapTitle.textContent = `Mapa de Ubicación: ${data.name}`;
 
-  // Update Sedes Cards highlight
+  // Update Clickable Sedes Cards highlight
   document.querySelectorAll(".sede-card").forEach(card => {
     card.classList.remove("active-card");
   });
@@ -170,11 +364,22 @@ function initLocationSwitcher() {
     });
   });
 
-  // Sede Card Select Buttons
-  document.querySelectorAll(".btn-select-sede").forEach(btn => {
-    btn.addEventListener("click", () => {
-      setActiveLocation(btn.dataset.select);
-      document.getElementById("sedes").scrollIntoView({ behavior: 'smooth' });
+  // Clickable Sede Cards
+  document.querySelectorAll(".clickable-card").forEach(card => {
+    card.addEventListener("click", () => {
+      const locId = card.dataset.select;
+      if (locId) {
+        setActiveLocation(locId);
+      }
+    });
+
+    // Keyboard accessibility
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        const locId = card.dataset.select;
+        if (locId) setActiveLocation(locId);
+      }
     });
   });
 }
@@ -184,13 +389,10 @@ function renderMenu(category) {
   const grid = document.getElementById("menuGrid");
   if (!grid) return;
 
-  const filtered = category === "all" 
-    ? menuData 
-    : menuData.filter(item => item.category === category);
+  const filtered = menuData.filter(item => item.category === category);
 
   grid.innerHTML = filtered.map(item => `
     <div class="menu-card">
-      <img src="${item.img}" alt="${item.title}" class="menu-img" loading="lazy">
       <div class="menu-card-body">
         <div class="menu-card-header">
           <h3 class="menu-title">${item.title}</h3>

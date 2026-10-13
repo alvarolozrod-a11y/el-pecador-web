@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bar El Pecador | Hamburguesería & Bar de Raciones en Leganés y Alcorcón</title>
-    <meta name="description" content="Descubre Bar El Pecador. Las mejores hamburguesas gourmet y raciones en Leganés y Alcorcón. Pide a domicilio o reserva tu mesa en nuestra web.">
-    <meta name="keywords" content="bar el pecador, hamburgueseria leganes, hamburgueseria alcorcon, raciones leganes, raciones alcorcon, comida americana madrid">
+    <meta name="description" content="Descubre Bar El Pecador. Las mejores hamburguesas gourmet, raciones, bocatas y desayunos en Leganés y Alcorcón. Pide a domicilio o reserva tu mesa.">
+    <meta name="keywords" content="bar el pecador, hamburgueseria leganes, hamburgueseria alcorcon, raciones leganes, bocatas alcorcon, desayunos madrid">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Bar El Pecador | Hamburguesería & Raciones">
-    <meta property="og:description" content="El templo de las hamburguesas gourmet y las raciones en Leganés y Alcorcón.">
+    <meta property="og:description" content="El templo de las hamburguesas gourmet, raciones y bocatas en Leganés y Alcorcón.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://barelpecador.es">
 
@@ -33,7 +33,7 @@
         "url": "https://barelpecador.es",
         "telephone": "+34640844539",
         "priceRange": "€€",
-        "servesCuisine": ["Burger", "American", "Spanish Tapa"],
+        "servesCuisine": ["Burger", "American", "Spanish Tapa", "Breakfast"],
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Av. de Carmen Martín Gaite, 61",
@@ -70,7 +70,7 @@
         "url": "https://barelpecador.es",
         "telephone": "+34640844539",
         "priceRange": "€€",
-        "servesCuisine": ["Burger", "American", "Spanish Tapa"],
+        "servesCuisine": ["Burger", "American", "Spanish Tapa", "Breakfast"],
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "C. los Nardos, 59",
@@ -119,6 +119,12 @@
                 </select>
             </div>
 
+            <!-- Prominent Direct Call Button -->
+            <a href="tel:+34640844539" class="nav-call-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>640 84 45 39</span>
+            </a>
+
             <nav class="nav-menu" id="navMenu">
                 <a href="#menu" class="nav-link">Carta</a>
                 <a href="#sedes" class="nav-link">Sedes</a>
@@ -143,12 +149,12 @@
                 <div class="badge">🔥 EL TEMPLO DEL PECADO GASTRONÓMICO</div>
                 <h1 class="hero-title">PECADO CAPITAL EN CADA BOCADO</h1>
                 <p class="hero-subtitle">
-                    Hamburguesas gourmet brutales y raciones caseras para compartir. Sabor auténtico en Leganés y Alcorcón.
+                    Hamburguesas gourmet, raciones para compartir, bocatas y desayunos. Sabor auténtico en Leganés y Alcorcón.
                 </p>
 
-                <!-- Location Selector Hero Tabs -->
+                <!-- Location Selector Hero Cards -->
                 <div class="hero-location-card">
-                    <span class="hero-location-title">Selecciona tu sede preferida:</span>
+                    <span class="hero-location-title">Haz clic en la sede para seleccionarla:</span>
                     <div class="location-tabs">
                         <button class="tab-btn active" data-location="leganes">
                             📍 Sede Leganés
@@ -174,18 +180,19 @@
         <section class="menu-section" id="menu">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-tag">NUESTRA CARTA</span>
+                    <span class="section-tag">NUESTRA CARTA COMPLETA</span>
                     <h2 class="section-title">PECA CON GUSTO</h2>
-                    <p class="section-desc">Misma calidad, mismo sabor y la mejor materia prima en ambas sedes.</p>
+                    <p class="section-desc">Misma calidad, mismo sabor y los mejores ingredientes en ambas sedes.</p>
                 </div>
 
-                <!-- Menu Filter Buttons -->
+                <!-- Menu Filter Buttons (Categories match real menu) -->
                 <div class="menu-filters">
-                    <button class="filter-btn active" data-category="all">Todos</button>
-                    <button class="filter-btn" data-category="entrantes">Entrantes & Raciones</button>
-                    <button class="filter-btn" data-category="burgers">Hamburguesas Gourmet</button>
-                    <button class="filter-btn" data-category="postres">Postres Pecaminosos</button>
-                    <button class="filter-btn" data-category="bebidas">Bebidas & Cervezas</button>
+                    <button class="filter-btn active" data-category="hamburguesas">Hamburguesas</button>
+                    <button class="filter-btn" data-category="para-compartir">Para Compartir</button>
+                    <button class="filter-btn" data-category="bocatas">Bocatas</button>
+                    <button class="filter-btn" data-category="perritos">Perritos</button>
+                    <button class="filter-btn" data-category="desayunos">Desayunos</button>
+                    <button class="filter-btn" data-category="postres">Postres</button>
                 </div>
 
                 <!-- Menu Items Grid -->
@@ -201,15 +208,16 @@
                 <div class="section-header text-center">
                     <span class="section-tag">NUESTRAS UBICACIONES</span>
                     <h2 class="section-title">ELIGE TU SEDE MÁS CERCANA</h2>
-                    <p class="section-desc">Dos templos gastronómicos esperándote en la zona sur de Madrid.</p>
+                    <p class="section-desc">Haz clic sobre la tarjeta de cualquier sede para seleccionarla dinámicamente.</p>
                 </div>
 
                 <div class="sedes-grid">
-                    <!-- Sede Leganés Card -->
-                    <div class="sede-card" id="cardLeganes">
+                    <!-- Sede Leganés Card (Entire card is clickable) -->
+                    <div class="sede-card clickable-card" id="cardLeganes" data-select="leganes" role="button" tabindex="0">
                         <div class="sede-image-wrapper">
                             <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Bar El Pecador Leganés" loading="lazy">
                             <span class="badge-tag">Sede Leganés</span>
+                            <div class="card-selected-indicator">✓ SEDE SELECCIONADA</div>
                         </div>
                         <div class="sede-content">
                             <h3>Bar El Pecador - Leganés</h3>
@@ -220,7 +228,7 @@
                                 </li>
                                 <li>
                                     <strong>📞 Teléfono:</strong> 
-                                    <a href="tel:+34640844539">+34 640 84 45 39</a>
+                                    <span class="phone-link">+34 640 84 45 39</span>
                                 </li>
                                 <li>
                                     <strong>⏰ Horario:</strong> 
@@ -228,17 +236,17 @@
                                 </li>
                             </ul>
                             <div class="sede-actions">
-                                <a href="https://maps.app.goo.gl/KsuvHFHtk4R83ind6" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Cómo Llegar (Maps)</a>
-                                <button class="btn btn-primary btn-sm btn-select-sede" data-select="leganes">Seleccionar Sede</button>
+                                <a href="https://maps.app.goo.gl/KsuvHFHtk4R83ind6" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" onclick="event.stopPropagation();">Cómo Llegar (Maps)</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Sede Alcorcón Card -->
-                    <div class="sede-card" id="cardAlcorcon">
+                    <!-- Sede Alcorcón Card (Entire card is clickable) -->
+                    <div class="sede-card clickable-card" id="cardAlcorcon" data-select="alcorcon" role="button" tabindex="0">
                         <div class="sede-image-wrapper">
                             <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Bar El Pecador Alcorcón" loading="lazy">
                             <span class="badge-tag">Sede Alcorcón</span>
+                            <div class="card-selected-indicator">✓ SEDE SELECCIONADA</div>
                         </div>
                         <div class="sede-content">
                             <h3>Bar El Pecador - Alcorcón</h3>
@@ -249,7 +257,7 @@
                                 </li>
                                 <li>
                                     <strong>📞 Teléfono:</strong> 
-                                    <a href="tel:+34640844539">+34 640 84 45 39</a>
+                                    <span class="phone-link">+34 640 84 45 39</span>
                                 </li>
                                 <li>
                                     <strong>⏰ Horario:</strong> 
@@ -257,8 +265,7 @@
                                 </li>
                             </ul>
                             <div class="sede-actions">
-                                <a href="https://maps.app.goo.gl/6xt5AqrtAcA1sL4a6" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Cómo Llegar (Maps)</a>
-                                <button class="btn btn-primary btn-sm btn-select-sede" data-select="alcorcon">Seleccionar Sede</button>
+                                <a href="https://maps.app.goo.gl/6xt5AqrtAcA1sL4a6" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" onclick="event.stopPropagation();">Cómo Llegar (Maps)</a>
                             </div>
                         </div>
                     </div>
@@ -281,10 +288,10 @@
                     <span class="section-tag">NUESTRA HISTORIA</span>
                     <h2 class="section-title">PASIÓN POR LA BUENA COMIDA</h2>
                     <p>
-                        <strong>Bar El Pecador</strong> nació con una misión clara: ofrecer comida reconfortante, abundante y llena de sabor sin rodeos. Creemos que una gran hamburguesa empieza con carne seleccionada de la máxima calidad, pan brioche horneado a diario y salsas de receta secreta.
+                        <strong>Bar El Pecador</strong> nació con una misión clara: ofrecer comida reconfortante, abundante y llena de sabor sin rodeos. Creemos que una gran experiencia gastronómica empieza con insumos seleccionados de la máxima calidad.
                     </p>
                     <p>
-                        Tras consolidar nuestro éxito en Leganés, expandimos nuestra visión a Alcorcón para que más amantes del buen comer puedan disfrutar del auténtico ritual del pecado gastronómico.
+                        Tras consolidar nuestro éxito en Leganés, expandimos nuestra visión a Alcorcón para que más amantes del buen comer puedan disfrutar del auténtico ritual del pecado gastronómico a cualquier hora del día.
                     </p>
                     <div class="stats-row">
                         <div class="stat-item">
@@ -318,17 +325,17 @@
                 <div class="reviews-grid">
                     <div class="review-card">
                         <div class="stars">★★★★★</div>
-                        <p class="review-text">"Las mejores hamburguesas de Leganés sin duda. La carne tiene un sabor brutal y el servicio es super rápido. Volveremos seguro."</p>
+                        <p class="review-text">"Las mejores hamburguesas y raciones de Leganés sin duda. La carne tiene un sabor brutal y el servicio es super rápido."</p>
                         <span class="review-author">- Carlos M. (Google Local Guide)</span>
                     </div>
                     <div class="review-card">
                         <div class="stars">★★★★★</div>
-                        <p class="review-text">"Probamos la sede de Alcorcón recién abierta. Las raciones son enormes y las patatas con bacon y queso están de escándolo."</p>
+                        <p class="review-text">"Probamos la sede de Alcorcón. Los bocatas y las patatas con cheddar y bacon están de escándalo. Repetiremos seguro."</p>
                         <span class="review-author">- Laura G.</span>
                     </div>
                     <div class="review-card">
                         <div class="stars">★★★★★</div>
-                        <p class="review-text">"Excelente relación calidad-precio. El ambiente en el local es genial y la atención impecable."</p>
+                        <p class="review-text">"Excelente relación calidad-precio. Un ambiente estupendo tanto para desayunar como para cenar con amigos."</p>
                         <span class="review-author">- David R.</span>
                     </div>
                 </div>
@@ -392,7 +399,7 @@
         <div class="container footer-content">
             <div class="footer-brand">
                 <a href="#" class="logo">EL PECADOR<span>.</span></a>
-                <p>Tu hamburguesería y bar de raciones preferido en Leganés y Alcorcón.</p>
+                <p>Tu hamburguesería, bar de raciones y bocatas preferido en Leganés y Alcorcón.</p>
             </div>
             <div class="footer-links">
                 <h4>Enlaces Rápidos</h4>
@@ -405,7 +412,7 @@
             </div>
             <div class="footer-contact">
                 <h4>Atención al Cliente</h4>
-                <p>Teléfono único: <a href="tel:+34640844539">+34 640 84 45 39</a></p>
+                <p>Teléfono único: <a href="tel:+34640844539" class="highlight-link">+34 640 84 45 39</a></p>
                 <p>Horario: Lunes a Domingo de 12:00 a 00:00</p>
             </div>
         </div>
