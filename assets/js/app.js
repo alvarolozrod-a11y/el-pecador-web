@@ -1,5 +1,5 @@
 /* ==========================================================================
-   EL PECADOR - APP LOGIC (UPDATED WITH ACCURATE HIGH QUALITY DESAYUNOS PHOTOS)
+   EL PECADOR - APP LOGIC (ACCURATE DESAYUNOS PHOTO SWAPS)
    ========================================================================== */
 
 // Data definitions for locations
@@ -26,7 +26,7 @@ const locationsData = {
   }
 };
 
-// Real Menu Data with Updated High-Quality Accurately Matched Photos for Desayunos
+// Real Menu Data with Updated Precise Image Swaps for Desayunos
 const menuData = [
   // --- DESAYUNOS ---
   {
@@ -34,7 +34,8 @@ const menuData = [
     category: "desayunos",
     price: "Consultar",
     desc: "Mixto o a la plancha fundido",
-    img: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=400&q=80"
+    // Croissant partido a la mitad a la plancha
+    img: "https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Tostada",
@@ -48,7 +49,8 @@ const menuData = [
     category: "desayunos",
     price: "Consultar",
     desc: "Jugosa tortilla de patatas artesanal recién hecha",
-    img: "https://images.unsplash.com/photo-1584278860047-22db9ff82bed?auto=format&fit=crop&w=400&q=80"
+    // Pincho de tortilla de patata española tradicional
+    img: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Café",
@@ -62,6 +64,7 @@ const menuData = [
     category: "desayunos",
     price: "Consultar",
     desc: "Churros y porras artesanas recién elaborados",
+    // Plato con los típicos churros españoles dorados
     img: "https://images.unsplash.com/photo-1624300629298-e9de39c13be5?auto=format&fit=crop&w=400&q=80"
   },
   {
@@ -76,6 +79,7 @@ const menuData = [
     category: "desayunos",
     price: "Consultar",
     desc: "Plato completo de huevos con bacon crujiente",
+    // Plato con huevos fritos y tiras de bacon crujientes
     img: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=400&q=80"
   },
   {
@@ -90,6 +94,7 @@ const menuData = [
     category: "desayunos",
     price: "Consultar",
     desc: "Cacao servido con leche bien caliente o fría",
+    // Vaso con cacao con leche y sobrecillo
     img: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=400&q=80"
   },
 
