@@ -1,5 +1,5 @@
 /* ==========================================================================
-   EL PECADOR - APP LOGIC (MULTISEDE + REVIEWS CAROUSEL WITH SWIPE)
+   EL PECADOR - APP LOGIC (UPDATED WITH REORDERED MENU CATEGORIES)
    ========================================================================== */
 
 // Data definitions for locations
@@ -28,55 +28,113 @@ const locationsData = {
 
 // Real Menu Data
 const menuData = [
-  // --- HAMBURGUESAS ---
+  // --- DESAYUNOS ---
   {
-    title: "Pollo",
-    category: "hamburguesas",
-    price: "€14.00",
-    desc: "Cheddar, tomate, cebolla",
-    img: "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    title: "Bacon",
-    category: "hamburguesas",
-    price: "€14.00",
-    desc: "Cheddar, bacon, cebolla crunch",
-    img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    title: "Cecina",
-    category: "hamburguesas",
-    price: "€14.00",
-    desc: "Cecina, queso de cabra, cebolla caramelizada",
-    img: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    title: "Sweet",
-    category: "hamburguesas",
-    price: "€14.00",
-    desc: "Mermelada, queso crema, bacon, aros de cebolla",
+    title: "Sandwich / Croissant",
+    category: "desayunos",
+    price: "Consultar",
+    desc: "Mixto o a la plancha fundido",
     img: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80"
   },
   {
-    title: "Mexicana",
-    category: "hamburguesas",
-    price: "€14.00",
-    desc: "Relish, jalapeños, guacamole, tomate, cebolla, mostaza dulce",
-    img: "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f6?auto=format&fit=crop&w=400&q=80"
+    title: "Tostada",
+    category: "desayunos",
+    price: "Consultar",
+    desc: "Con tomate natural, aceite de oliva o mantequilla y mermelada",
+    img: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=400&q=80"
   },
   {
-    title: "Triple",
-    category: "hamburguesas",
-    price: "€14.00",
-    desc: "Triple carne, triple cheddar, bacon, cebolla crunch, huevo",
-    img: "https://images.unsplash.com/photo-1583723171701-a20c38661642?auto=format&fit=crop&w=400&q=80"
+    title: "Pincho De Tortilla",
+    category: "desayunos",
+    price: "Consultar",
+    desc: "Jugosa tortilla de patatas artesanal recién hecha",
+    img: "https://images.unsplash.com/photo-1584278860047-22db9ff82bed?auto=format&fit=crop&w=400&q=80"
   },
   {
-    title: "Especial",
-    category: "hamburguesas",
-    price: "€14.00",
-    desc: "Triple carne, champiñones, guacamole, mozzarella",
-    img: "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=400&q=80"
+    title: "Café",
+    category: "desayunos",
+    price: "Consultar",
+    desc: "Solo, cortado, con leche, expreso o americano",
+    img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    title: "Churros / Porras",
+    category: "desayunos",
+    price: "Consultar",
+    desc: "Churros y porras artesanas recién elaborados",
+    img: "https://images.unsplash.com/photo-1624300629298-e9de39c13be5?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    title: "Infusión",
+    category: "desayunos",
+    price: "Consultar",
+    desc: "Variedad de tés, manzanilla, poleo e infusiones",
+    img: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    title: "Huevos Con Bacon",
+    category: "desayunos",
+    price: "Consultar",
+    desc: "Plato completo de huevos con bacon crujiente",
+    img: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    title: "Bolleria",
+    category: "desayunos",
+    price: "Consultar",
+    desc: "Selección de bollería artesana del día",
+    img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    title: "Colacao",
+    category: "desayunos",
+    price: "Consultar",
+    desc: "Cacao servido con leche bien caliente o fría",
+    img: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=400&q=80"
+  },
+
+  // --- BOCATAS ---
+  {
+    title: "Lomo",
+    category: "bocatas",
+    price: "€5.50",
+    desc: "Bocata en pan crujiente recién hecho de lomo a la plancha",
+    img: "https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    title: "Bacon",
+    category: "bocatas",
+    price: "€5.50",
+    desc: "Bocata tradicional de bacon dorado a la plancha",
+    img: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    title: "Panceta",
+    category: "bocatas",
+    price: "€5.50",
+    desc: "Bocata reconfortante de panceta sabrosa",
+    img: "https://images.unsplash.com/photo-1553909489-cd47e0907980?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    title: "Pollo",
+    category: "bocatas",
+    price: "€7.50",
+    desc: "Bocata jugoso de pechuga de pollo a la plancha",
+    img: "https://images.unsplash.com/photo-1603064752734-4c48eff53d05?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    title: "Jamón",
+    category: "bocatas",
+    price: "€7.50",
+    desc: "Bocata de jamón ibérico con un chorrito de aceite virgen",
+    img: "https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    title: "Calamares",
+    category: "bocatas",
+    price: "€7.50",
+    desc: "El castizo bocadillo de calamares crujientes",
+    img: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=400&q=80"
   },
 
   // --- PARA COMPARTIR ---
@@ -172,48 +230,55 @@ const menuData = [
     img: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=400&q=80"
   },
 
-  // --- BOCATAS ---
+  // --- HAMBURGUESAS ---
   {
-    title: "Lomo",
-    category: "bocatas",
-    price: "€5.50",
-    desc: "Bocata en pan crujiente recién hecho de lomo a la plancha",
-    img: "https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=400&q=80"
+    title: "Pollo",
+    category: "hamburguesas",
+    price: "€14.00",
+    desc: "Cheddar, tomate, cebolla",
+    img: "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Bacon",
-    category: "bocatas",
-    price: "€5.50",
-    desc: "Bocata tradicional de bacon dorado a la plancha",
-    img: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=400&q=80"
+    category: "hamburguesas",
+    price: "€14.00",
+    desc: "Cheddar, bacon, cebolla crunch",
+    img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80"
   },
   {
-    title: "Panceta",
-    category: "bocatas",
-    price: "€5.50",
-    desc: "Bocata reconfortante de panceta sabrosa",
-    img: "https://images.unsplash.com/photo-1553909489-cd47e0907980?auto=format&fit=crop&w=400&q=80"
+    title: "Cecina",
+    category: "hamburguesas",
+    price: "€14.00",
+    desc: "Cecina, queso de cabra, cebolla caramelizada",
+    img: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=400&q=80"
   },
   {
-    title: "Pollo",
-    category: "bocatas",
-    price: "€7.50",
-    desc: "Bocata jugoso de pechuga de pollo a la plancha",
-    img: "https://images.unsplash.com/photo-1603064752734-4c48eff53d05?auto=format&fit=crop&w=400&q=80"
+    title: "Sweet",
+    category: "hamburguesas",
+    price: "€14.00",
+    desc: "Mermelada, queso crema, bacon, aros de cebolla",
+    img: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80"
   },
   {
-    title: "Jamón",
-    category: "bocatas",
-    price: "€7.50",
-    desc: "Bocata de jamón ibérico con un chorrito de aceite virgen",
-    img: "https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=400&q=80"
+    title: "Mexicana",
+    category: "hamburguesas",
+    price: "€14.00",
+    desc: "Relish, jalapeños, guacamole, tomate, cebolla, mostaza dulce",
+    img: "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f6?auto=format&fit=crop&w=400&q=80"
   },
   {
-    title: "Calamares",
-    category: "bocatas",
-    price: "€7.50",
-    desc: "El castizo bocadillo de calamares crujientes",
-    img: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=400&q=80"
+    title: "Triple",
+    category: "hamburguesas",
+    price: "€14.00",
+    desc: "Triple carne, triple cheddar, bacon, cebolla crunch, huevo",
+    img: "https://images.unsplash.com/photo-1583723171701-a20c38661642?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    title: "Especial",
+    category: "hamburguesas",
+    price: "€14.00",
+    desc: "Triple carne, champiñones, guacamole, mozzarella",
+    img: "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=400&q=80"
   },
 
   // --- PERRITOS ---
@@ -230,71 +295,6 @@ const menuData = [
     price: "€7.00",
     desc: "Ketchup, mostaza, mayonesa, salsa cheddar, bacon, salsa pepinillos, cebolla crunch",
     img: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=400&q=80"
-  },
-
-  // --- DESAYUNOS ---
-  {
-    title: "Sandwich / Croissant",
-    category: "desayunos",
-    price: "Consultar",
-    desc: "Mixto o a la plancha fundido",
-    img: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    title: "Tostada",
-    category: "desayunos",
-    price: "Consultar",
-    desc: "Con tomate natural, aceite de oliva o mantequilla y mermelada",
-    img: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    title: "Pincho De Tortilla",
-    category: "desayunos",
-    price: "Consultar",
-    desc: "Jugosa tortilla de patatas artesanal recién hecha",
-    img: "https://images.unsplash.com/photo-1584278860047-22db9ff82bed?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    title: "Café",
-    category: "desayunos",
-    price: "Consultar",
-    desc: "Solo, cortado, con leche, expreso o americano",
-    img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    title: "Churros / Porras",
-    category: "desayunos",
-    price: "Consultar",
-    desc: "Churros y porras artesanas recién elaborados",
-    img: "https://images.unsplash.com/photo-1624300629298-e9de39c13be5?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    title: "Infusión",
-    category: "desayunos",
-    price: "Consultar",
-    desc: "Variedad de tés, manzanilla, poleo e infusiones",
-    img: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    title: "Huevos Con Bacon",
-    category: "desayunos",
-    price: "Consultar",
-    desc: "Plato completo de huevos con bacon crujiente",
-    img: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    title: "Bolleria",
-    category: "desayunos",
-    price: "Consultar",
-    desc: "Selección de bollería artesana del día",
-    img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    title: "Colacao",
-    category: "desayunos",
-    price: "Consultar",
-    desc: "Cacao servido con leche bien caliente o fría",
-    img: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=400&q=80"
   },
 
   // --- POSTRES ---
@@ -333,7 +333,7 @@ let currentActiveLocation = "leganes";
 // DOM Loaded Initialization
 document.addEventListener("DOMContentLoaded", () => {
   initLocationSwitcher();
-  renderMenu("hamburguesas");
+  renderMenu("desayunos"); // Default active category set to "Desayunos"
   initMenuFilters();
   initMobileMenu();
   initReviewsCarousel();
@@ -381,7 +381,7 @@ function initLocationSwitcher() {
     });
   }
 
-  // Clickable Sede Cards with ultra-fast event handling
+  // Clickable Sede Cards
   const clickableCards = document.querySelectorAll(".clickable-card");
   clickableCards.forEach(card => {
     card.addEventListener("click", () => {
@@ -466,7 +466,6 @@ function initReviewsCarousel() {
   let startX = 0;
   let isDragging = false;
 
-  // Create Navigation Dots
   slides.forEach((_, idx) => {
     const dot = document.createElement("div");
     dot.classList.add("dot");
@@ -503,7 +502,6 @@ function initReviewsCarousel() {
   if (nextBtn) nextBtn.addEventListener("click", nextSlide);
   if (prevBtn) prevBtn.addEventListener("click", prevSlide);
 
-  // Auto Play every 4 seconds
   function startAutoSlide() {
     autoSlideInterval = setInterval(nextSlide, 4000);
   }
@@ -515,7 +513,6 @@ function initReviewsCarousel() {
 
   startAutoSlide();
 
-  // Touch and Mouse Drag Events for Mobile & Desktop Swipe
   const trackWrapper = document.querySelector(".carousel-track-wrapper");
 
   if (trackWrapper) {
