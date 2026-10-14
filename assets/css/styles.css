@@ -159,7 +159,7 @@ h1, h2, h3, h4 {
   color: var(--primary);
 }
 
-/* Call Button placed next to the navigation index links */
+/* Call Button placed next to navigation index links */
 .nav-call-btn {
   display: inline-flex;
   align-items: center;

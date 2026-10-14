@@ -1,5 +1,5 @@
 /* ==========================================================================
-   EL PECADOR - APP LOGIC (DESAYUNOS AS FIRST TAB, HAMBURGUESAS ACTIVE BY DEFAULT)
+   EL PECADOR - APP LOGIC (UPDATED WITH ACCURATE HIGH QUALITY DESAYUNOS PHOTOS)
    ========================================================================== */
 
 // Data definitions for locations
@@ -26,7 +26,7 @@ const locationsData = {
   }
 };
 
-// Real Menu Data
+// Real Menu Data with Updated High-Quality Accurately Matched Photos for Desayunos
 const menuData = [
   // --- DESAYUNOS ---
   {
@@ -34,7 +34,7 @@ const menuData = [
     category: "desayunos",
     price: "Consultar",
     desc: "Mixto o a la plancha fundido",
-    img: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80"
+    img: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "Tostada",
