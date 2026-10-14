@@ -1,5 +1,5 @@
 /* ==========================================================================
-   EL PECADOR - APP LOGIC (UPDATED WITH REORDERED MENU CATEGORIES)
+   EL PECADOR - APP LOGIC (DESAYUNOS AS FIRST TAB, HAMBURGUESAS ACTIVE BY DEFAULT)
    ========================================================================== */
 
 // Data definitions for locations
@@ -333,7 +333,7 @@ let currentActiveLocation = "leganes";
 // DOM Loaded Initialization
 document.addEventListener("DOMContentLoaded", () => {
   initLocationSwitcher();
-  renderMenu("desayunos"); // Default active category set to "Desayunos"
+  renderMenu("hamburguesas"); // Active category set to "hamburguesas" by default on page load
   initMenuFilters();
   initMobileMenu();
   initReviewsCarousel();
