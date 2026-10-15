@@ -35,14 +35,14 @@ const menuData = [
     price: "Consultar",
     desc: "Mixto o a la plancha fundido",
     // Croissant partido a la mitad a la plancha
-    img: "https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/desayuno/desayuno-croissant.webp"
   },
   {
     title: "Tostada",
     category: "desayunos",
     price: "Consultar",
     desc: "Con tomate natural, aceite de oliva o mantequilla y mermelada",
-    img: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/desayuno/desayuno-tostada.webp"
   },
   {
     title: "Pincho De Tortilla",
@@ -50,14 +50,14 @@ const menuData = [
     price: "Consultar",
     desc: "Jugosa tortilla de patatas artesanal recién hecha",
     // Pincho de tortilla de patata española tradicional
-    img: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/desayuno/desayuno-pinchotortilla.webp"
   },
   {
     title: "Café",
     category: "desayunos",
     price: "Consultar",
     desc: "Solo, cortado, con leche, expreso o americano",
-    img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/desayuno/desayuno-cafe.webp"
   },
   {
     title: "Churros / Porras",
@@ -65,14 +65,14 @@ const menuData = [
     price: "Consultar",
     desc: "Churros y porras artesanas recién elaborados",
     // Plato con los típicos churros españoles dorados
-    img: "https://images.unsplash.com/photo-1624300629298-e9de39c13be5?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/desayuno/desayuno-churros.webp"
   },
   {
     title: "Infusión",
     category: "desayunos",
     price: "Consultar",
     desc: "Variedad de tés, manzanilla, poleo e infusiones",
-    img: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/desayuno/desayuno-infusion.webp"
   },
   {
     title: "Huevos Con Bacon",
@@ -80,14 +80,14 @@ const menuData = [
     price: "Consultar",
     desc: "Plato completo de huevos con bacon crujiente",
     // Plato con huevos fritos y tiras de bacon crujientes
-    img: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/desayuno/desayuno-huevosbacon.webp"
   },
   {
     title: "Bolleria",
     category: "desayunos",
     price: "Consultar",
     desc: "Selección de bollería artesana del día",
-    img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/desayuno/desayuno-bolleria.webp"
   },
   {
     title: "Colacao",
@@ -95,7 +95,7 @@ const menuData = [
     price: "Consultar",
     desc: "Cacao servido con leche bien caliente o fría",
     // Vaso con cacao con leche y sobrecillo
-    img: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/desayuno/desayuno-colacao.webp"
   },
 
   // --- BOCATAS ---
