@@ -104,42 +104,42 @@ const menuData = [
     category: "bocatas",
     price: "€5.50",
     desc: "Bocata en pan crujiente recién hecho de lomo a la plancha",
-    img: "https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/bocata/bocata-lomo.webp"
   },
   {
     title: "Bacon",
     category: "bocatas",
     price: "€5.50",
     desc: "Bocata tradicional de bacon dorado a la plancha",
-    img: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/bocata/bocata-bacon.webp"
   },
   {
     title: "Panceta",
     category: "bocatas",
     price: "€5.50",
     desc: "Bocata reconfortante de panceta sabrosa",
-    img: "https://images.unsplash.com/photo-1553909489-cd47e0907980?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/bocata/bocata-panceta.webp"
   },
   {
     title: "Pollo",
     category: "bocatas",
     price: "€7.50",
     desc: "Bocata jugoso de pechuga de pollo a la plancha",
-    img: "https://images.unsplash.com/photo-1603064752734-4c48eff53d05?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/bocata/bocata-pollo.webp"
   },
   {
     title: "Jamón",
     category: "bocatas",
     price: "€7.50",
     desc: "Bocata de jamón ibérico con un chorrito de aceite virgen",
-    img: "https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/bocata/bocata-jamon.webp"
   },
   {
     title: "Calamares",
     category: "bocatas",
     price: "€7.50",
     desc: "El castizo bocadillo de calamares crujientes",
-    img: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/bocata/bocata-calamares.webp"
   },
 
   // --- PARA COMPARTIR ---
@@ -148,91 +148,91 @@ const menuData = [
     category: "para-compartir",
     price: "€6.00",
     desc: "Patatas fritas crujientes estilo casero",
-    img: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/compartir/compartir-patatas.webp"
   },
   {
     title: "Patatas All-Oli",
     category: "para-compartir",
     price: "€6.00",
     desc: "Patatas caseras acompañadas de suave crema alioli",
-    img: "https://images.unsplash.com/photo-1630384060421-cb3f1b40439d?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/compartir/compartir-patatasalioli.webp"
   },
   {
     title: "Patatas Bravas",
     category: "para-compartir",
     price: "€6.00",
     desc: "Con nuestra salsa brava picante secreta",
-    img: "https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/compartir/compartir-patatasbravas.webp"
   },
   {
-    title: "Patatas Braviolos",
+    title: "Patatas Braviolis",
     category: "para-compartir",
     price: "€6.00",
     desc: "Mezcla irresistible de salsa brava y alioli casero",
-    img: "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/compartir/compartir-patatasbravioli.webp"
   },
   {
     title: "Croquetón De Jamón (4u)",
     category: "para-compartir",
     price: "€6.00",
     desc: "4 unidades cremosas de jamón ibérico artesanal",
-    img: "https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/compartir/compartir-croquetas.webp"
   },
   {
     title: "Salchipapas",
     category: "para-compartir",
     price: "€7.00",
     desc: "Patatas fritas doradas con salchichas y salsas especial",
-    img: "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/compartir/compartir-salchipapas.webp"
   },
   {
     title: "Aros De Cebolla",
     category: "para-compartir",
     price: "€7.00",
     desc: "Crujientes aros de cebolla rebozados dorados",
-    img: "https://images.unsplash.com/photo-1639024471283-03518883512d?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/compartir/compartir-aroscebolla.webp"
   },
   {
     title: "Tequeños De Queso (6u)",
     category: "para-compartir",
     price: "€7.00",
     desc: "6 palitos de queso fundente y crujiente",
-    img: "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/compartir/compartir-teque%C3%B1os.webp"
   },
   {
     title: "Patatas Cheddar Y Bacon",
     category: "para-compartir",
     price: "€8.00",
     desc: "Bañadas en crema de cheddar caliente y trozos de bacon",
-    img: "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/compartir/compartir-patataschedarbacon.webp"
   },
   {
     title: "Oreja",
     category: "para-compartir",
     price: "€9.00",
     desc: "Oreja a la plancha dorada con toque de ajo y perejil",
-    img: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/compartir/compartir-oreja.webp"
   },
   {
     title: "Alitas",
     category: "para-compartir",
     price: "€9.00",
     desc: "Alitas de pollo sabrosas y crujientes",
-    img: "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/compartir/compartir-alitas.webp"
   },
   {
     title: "Fingers De Pollo",
     category: "para-compartir",
     price: "€9.00",
     desc: "Tiras de pechuga empanadas crujientes",
-    img: "https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/compartir/compartir-fingerspollo.webp"
   },
   {
     title: "Calamares",
     category: "para-compartir",
     price: "€14.00",
     desc: "Ración abundante de calamares a la romana tierno",
-    img: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/compartir/compartir-calamares.webp"
   },
 
   // --- HAMBURGUESAS ---
