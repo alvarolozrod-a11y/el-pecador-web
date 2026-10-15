@@ -241,49 +241,49 @@ const menuData = [
     category: "hamburguesas",
     price: "€14.00",
     desc: "Cheddar, tomate, cebolla",
-    img: "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/hamburguesa/hamburguesa-pollo.webp"
   },
   {
     title: "Bacon",
     category: "hamburguesas",
     price: "€14.00",
     desc: "Cheddar, bacon, cebolla crunch",
-    img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/hamburguesa/hamburguesa-bacon.webp"
   },
   {
     title: "Cecina",
     category: "hamburguesas",
     price: "€14.00",
     desc: "Cecina, queso de cabra, cebolla caramelizada",
-    img: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/hamburguesa/hamburguesa-cecina.webp"
   },
   {
     title: "Sweet",
     category: "hamburguesas",
     price: "€14.00",
     desc: "Mermelada, queso crema, bacon, aros de cebolla",
-    img: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/hamburguesa/hamburguesa-sweet.webp"
   },
   {
     title: "Mexicana",
     category: "hamburguesas",
     price: "€14.00",
     desc: "Relish, jalapeños, guacamole, tomate, cebolla, mostaza dulce",
-    img: "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f6?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/hamburguesa/hamburguesa-mexicana.webp"
   },
   {
     title: "Triple",
     category: "hamburguesas",
     price: "€14.00",
     desc: "Triple carne, triple cheddar, bacon, cebolla crunch, huevo",
-    img: "https://images.unsplash.com/photo-1583723171701-a20c38661642?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/hamburguesa/hamburguesa-triple.webp"
   },
   {
     title: "Especial",
     category: "hamburguesas",
     price: "€14.00",
     desc: "Triple carne, champiñones, guacamole, mozzarella",
-    img: "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/hamburguesa/hamburguesa-especial.webp"
   },
 
   // --- PERRITOS ---
@@ -292,14 +292,14 @@ const menuData = [
     category: "perritos",
     price: "€5.00",
     desc: "Ketchup, mostaza, mayonesa, cebolla crunch",
-    img: "https://images.unsplash.com/photo-1619740455993-9e612b1af08a?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/perrito/perrito-especial.webp"
   },
   {
     title: "Perrito Especial",
     category: "perritos",
     price: "€7.00",
     desc: "Ketchup, mostaza, mayonesa, salsa cheddar, bacon, salsa pepinillos, cebolla crunch",
-    img: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/perrito/perrito-simple.webp"
   },
 
   // --- POSTRES ---
@@ -308,28 +308,28 @@ const menuData = [
     category: "postres",
     price: "Consultar",
     desc: "Tarta casera con cremosa cobertura de chocolate puro",
-    img: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/postre/postre-tartachocolate.webp"
   },
   {
     title: "Tarta De Dulce De Leche",
     category: "postres",
     price: "Consultar",
     desc: "Deliciosa tarta esponjosa rellena de dulce de leche",
-    img: "https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/postre/postre-tartadulceleche.webp"
   },
   {
     title: "Helado",
     category: "postres",
     price: "Consultar",
     desc: "Variedad de artesanos e intensos sabores",
-    img: "https://images.unsplash.com/photo-1560008581-09826d1de69e?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/postre/postre-helado.webp"
   },
   {
     title: "Tequeños De Nutella (6u)",
     category: "postres",
     price: "Consultar",
     desc: "6 unidades crujientes rellenas de Nutella caliente",
-    img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=400&q=80"
+    img: "assets/images/postre/postre-tequenosnutella.webp"
   }
 ];
 
