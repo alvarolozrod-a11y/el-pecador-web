@@ -12,7 +12,7 @@ const locationsData = {
     phone: "+34 640 84 45 39",
     hours: "Lunes a Domingo: 12:00 – 00:00",
     mapsUrl: "https://maps.app.goo.gl/KsuvHFHtk4R83ind6",
-    embedMapUrl: "https://maps.google.com/maps?q=40.3455389,-3.7451353&z=16&output=embed"
+    embedMapUrl: "assets/images/restaurantes/bar-leganes.webp"
   },
   alcorcon: {
     id: "alcorcon",
@@ -22,7 +22,7 @@ const locationsData = {
     phone: "+34 640 84 45 39",
     hours: "Lunes a Domingo: 12:00 – 00:00",
     mapsUrl: "https://maps.app.goo.gl/6xt5AqrtAcA1sL4a6",
-    embedMapUrl: "https://maps.google.com/maps?q=40.3568875,-3.8069828&z=16&output=embed"
+    embedMapUrl: "assets/images/restaurantes/bar-alcorcon.webp"
   }
 };
 
